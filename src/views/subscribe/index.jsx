@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import { FaArrowRightLong } from "react-icons/fa6";
 
-
-const Subscribe=()=> {
-
+const Subscribe = () => {
   const instagramPhotos = [
     { id: 1, imgSrc: '/photos1.png', alt: 'Beach dog' },
     { id: 2, imgSrc: '/photos2.png', alt: 'Man with dog' },
@@ -16,32 +14,31 @@ const Subscribe=()=> {
   ];
 
   return (
-    <section className="min-h-screen bg-[#f8f6f3] text-gray-800 py-24 flex flex-col justify-center items-center ">
+    <section className="min-h-screen py-12 sm:py-16 md:py-24 flex flex-col justify-center items-center">
       {/* Newsletter Subscription Section */}
-    
-
-<div className="w-full bg-white   flex flex-col justify-start md:flex-row items-center  ">
-        
-        <div className="md:w-full flex justify-star items-start p-16 md:pl-24 md:px-24">
-            <div className='w-full max-w-[386px] '>
-                <h2 className="text-4xl font-bold mb-4">Subscribe to my newsletter</h2>
-                <p className="text-lg mb-6">Be signing up you agree with our Terms & Conditions and Privacy Policy.</p>
-                
-                <div className="flex border-2 ">
-                    <input
-                    type="email"
-                    placeholder="Your email"
-                    className="outline-none focus:bord p-4 rounded-l-md w-full relative"
-                    />
-                    <button className="rounded-r-md bg-transparent px-6">
-                    <FaArrowRightLong/>
-                    </button>
-                </div>
-        
-                <p className="mt-4 text-sm text-gray-600">
-                    By signing up, you agree with our Terms & Conditions and Privacy Policy. To opt out, click unsubscribe in my emails.
-                </p>
+      <div className="w-full bg-white flex flex-col-reverse md:flex-row items-center justify-center md:justify-start">
+        <div className="w-full flex justify-start items-start p-10  md:p-16 md:pl-24 sm:p-24">
+          <div className="w-full max-w-[386px]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 font-ibarrarealnova font-semibold">
+              <span className="font-extralight italic tracking-tight">Subscribe</span> to my newsletter
+            </h2>
+            <div className="flex border-2 ">
+              <input
+                type="email"
+                placeholder="Your email"
+                className="outline-none focus:border p-3 sm:p-4 rounded-l-md w-full"
+              />
+              <button className="rounded-r-md bg-transparent px-6">
+                <FaArrowRightLong />
+              </button>
             </div>
+            <p className="text-xs sm:text-sm mt-6 font-inters font-semibold tracking-tight leading-relaxed">
+              By signing up, you agree with our{' '}
+              <span className="underline">Terms & Conditions</span> and{' '}
+              <span className="underline">Privacy Policy.</span> To opt out, click unsubscribe in my
+              emails.
+            </p>
+          </div>
         </div>
         <div className="relative w-full max-h-[671px] aspect-square">
           <Image
@@ -54,24 +51,22 @@ const Subscribe=()=> {
         </div>
       </div>
 
-
-
-
-
       {/* Instagram Section */}
-      <div className="container w-100% mt-16 text-center py-16 md:max-w-[1100px] flex flex-col justify-center items-center">
-        <h2 className="text-4xl w-full max-w-[300px] font-bold mb-10">Follow <span>me on Instagram</span></h2>
+      <div className="container w-full mt-16 text-center py-12 md:py-16 md:max-w-[1100px] flex flex-col justify-center items-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-[300px] font-bold mb-10 font-ibarrarealnova">
+          <span className="italic font-extralight tracking-tight ">Follow</span> me on Instagram
+        </h2>
 
         {/* Instagram Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
           {instagramPhotos.map((photo) => (
-            <div key={photo.id} className="relative w-full  aspect-[1/1.18]">
+            <div key={photo.id} className="relative w-full aspect-[1/1.18]">
               <Image
                 src={photo.imgSrc}
                 alt={photo.alt}
                 width={256}
                 height={298}
-                className="w-full h-full"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
@@ -81,4 +76,4 @@ const Subscribe=()=> {
   );
 }
 
-export default Subscribe
+export default Subscribe;

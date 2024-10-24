@@ -2,37 +2,53 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white px-6 md:px-24 py-10 pt-24 flex flex-col">
-      <div className="container flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+    <footer className="bg-[#1F1E2C] text-white  md:px-24 p-10 flex flex-col space-y-6">
+      <div className="container flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
         {/* Say Hello Section */}
-        <div>
-          <h3 className="text-sm font-semibold uppercase mb-2">Say Hello</h3>
-          <p className="text-2xl md:text-4xl font-bold">Hello@mattheigh.com</p>
+        <div className='flex flex-col items-start md:items-start text-center md:text-left'>
+          <h3 className="text-xs sm:text-sm font-semibold uppercase mb-2 font-inters tracking-wide">
+            Say Hello
+          </h3>
+          <p className="text-xl sm:text-2xl md:text-4xl font-semibold font-alegreya">
+            Hello@mattheigh.com
+          </p>
         </div>
 
         {/* Contact Info Section */}
-        <div className="w-full max-w-[400px] flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+        <div className="w-full  flex  md:flex-row gap-6 justify-between">
           {/* Samaritans */}
-          <div className="flex flex-col justify-start items-start gap-4">
-            <h4 className="text-sm font-semibold uppercase text-left">Samaritans</h4>
-            <p className="text-base text-left">jo@samaritans.org</p>
-            <p className="text-base text-left">0300 123 3393</p>
+          <div className="flex flex-col items-start md:items-start gap-2">
+            <h4 className="text-xs sm:text-sm font-semibold uppercase font-inters tracking-wider">
+              Samaritans
+            </h4>
+            <p className="text-sm sm:text-base font-kreon">
+              jo@samaritans.org
+            </p>
+            <p className="text-sm sm:text-base font-kreon">
+              0300 123 3393
+            </p>
           </div>
           {/* Mind Infoline */}
-          <div className="flex flex-col justify-start items-start gap-4">
-            <h4 className="text-sm font-semibold uppercase text-left">Mind Infoline</h4>
-            <p className="text-base text-left">info@mind.org.uk</p>
-            <p className="text-base text-left">0808 802 5544</p>
+          <div className="flex flex-col items-start md:items-start gap-2">
+            <h4 className="text-xs sm:text-sm font-semibold uppercase font-inters tracking-wider">
+              Mind Infoline
+            </h4>
+            <p className="text-sm sm:text-base font-kreon">
+              info@mind.org.uk
+            </p>
+            <p className="text-sm sm:text-base font-kreon">
+              0808 802 5544
+            </p>
           </div>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="w-full h-[1px] bg-[#4e4d4d] flex justify-center items-center mt-12 mb-6"></div>
+      <div className="w-full h-[1px] bg-[#4e4d4d] my-6"></div>
 
       {/* Social Links and Copyright */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
-        <p className="text-sm text-gray-400">
+      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
+        <p className="text-xs sm:text-sm font-inters">
           Copyright © 2023 — Matt Haig. All Rights Reserved.
         </p>
         <div className="flex space-x-4">

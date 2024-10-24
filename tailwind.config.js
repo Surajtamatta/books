@@ -6,6 +6,8 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	"./src/views/**/*.{js,ts,jsx,tsx,mdx}",
+
+
   ],
   theme: {
   	extend: {
@@ -49,7 +51,8 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -70,7 +73,10 @@ module.exports = {
 			kreon: ['var(--font-kreon)', 'serif'],
 			joaneitalic: ['var(--font-joaneitalic)', 'cursive']
 		  },
+		  
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	require("tailwindcss-animate"),
+],
 };
