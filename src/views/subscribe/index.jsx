@@ -14,7 +14,7 @@ const Subscribe = () => {
   ];
 
   return (
-    <section className="min-h-screen py-12 sm:py-16 md:py-24 flex flex-col justify-center items-center">
+    <section className=" py-12 sm:py-16 md:py-20 flex flex-col justify-center items-center">
       {/* Newsletter Subscription Section */}
       <div className="w-full bg-white flex flex-col-reverse md:flex-row items-center justify-center md:justify-start">
         <div className="w-full flex justify-start items-start p-10  md:p-16 md:pl-24 sm:p-24">

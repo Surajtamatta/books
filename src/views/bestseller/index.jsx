@@ -54,7 +54,7 @@ const BestSeller = () => {
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
   return (
-    <section className="min-h-screen  text-gray-800 pb-12 sm:pb-16 md:pb-24  overflow-x-hidden">
+    <section className=" text-gray-800  overflow-x-hidden">
       
           <ThirdCarousal  data={dummySlides} />
      
