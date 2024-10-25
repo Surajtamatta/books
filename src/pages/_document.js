@@ -1,6 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import PrelineScript from "./preline";
-
 
 export default function Document() {
   return (
@@ -9,7 +7,6 @@ export default function Document() {
       <body className="antialiased">
         <Main />
         <NextScript />
-        <PrelineScript/>
       </body>
     </Html>
   );

@@ -1,9 +1,9 @@
 
-import Hero from "@/views/hero";
-import Layout from "@/components/Layout";
-import Discover from "@/views/discover";
-import BestSeller from "@/views/bestseller";
-import Subscribe from "@/views/subscribe";
+import Hero from "../views/hero";
+import Layout from "../components/Layout";
+import Discover from "../views/discover";
+import BestSeller from "../views/bestseller";
+import Subscribe from "../views/subscribe";
 
 
 

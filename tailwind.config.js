@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		boxShadow:{
+			default:"20px 20px 40px 0px rgba(0,0,0,0.61);"
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -1,5 +1,5 @@
 import { Poppins,Libre_Caslon_Display,Belleza,Inter,Markazi_Text,Alkatra,Advent_Pro,Ibarra_Real_Nova,Alegreya,Piazzolla,Kreon } from 'next/font/google'
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import localFont from 'next/font/local'
 
 const poppins = Poppins({

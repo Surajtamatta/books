@@ -52,35 +52,12 @@ const Navbar = () => {
         <nav
           className={`max-sm:${
             menuOpen ? 'block' : 'hidden'
-          } max-sm:fixed w-full inset-0 bg-white bg-opacity-70 backdrop-blur-md z-40  mt-4 md:mt-0 flex justify-center
+          } max-sm:fixed w-full inset-0 bg-white bg-opacity-70 backdrop-blur-md z-40  flex justify-center
           transition-transform duration-500 ease-in-out transform max-sm:${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-           {/* <nav
-          className={`max-sm:${
-            menuOpen ? 'block' : 'hidden'
-          } flex h-12  max-w-[650px] items-center mt-4 md:mt-0
-          max-sm:fixed
-        max-sm:bg-white
-          max-sm:z-40
-          max-sm:top-20
-          max-sm:left-0
-          max-sm:h-full
-          max-sm:w-2/3
-          max-sm:transition-all
-          max-sm:ease-in-out
-          max-sm:duration-500
-          max-sm:transform 
-          `}
-        >
-          <div className='w-full flex h-12  max-w-[650px] gap-5 justify-between text-xs items-center mt-0 font-poppins font-semibol
-          max-sm:flex-col
-          max-sm:h-full
-          max-sm:items-start
-          max-sm:justify-start
-          max-sm:gap-0
-          '></div> */}
+      
 
           <div className="w-full max-w-[650px] max-sm:pt-20 h-12 max-sm:h-screen gap-5  flex  max-sm:flex-col items-center max-sm:items-start justify-between max-sm:justify-start  font-poppins font-semibold text-xs text-gray-700">
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 // import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import BookCarousel from '@/components/Carousal';
+import BookCarousel from '../../components/Carousal/FirstCarousel';
 
 const Hero = () => {
   const books = [
