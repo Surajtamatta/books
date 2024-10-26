@@ -64,6 +64,9 @@ module.exports = {
   		},
 		  fontFamily: {
 			poppins: ['var(--font-poppins)', 'sans-serif'],
+			stix:['var(--font-stix)','sans-serif'],
+			metal:['var(--font-metal)'],
+			sriracha:['var(--font-sriracha)'],
 			librecaslondisplay: ['var(--font-librecaslon-display)', 'serif'],
 			belleza: ['var(--font-belleza)', 'sans-serif'],
 			inters: ['var(--font-inters)', 'sans-serif'],
@@ -80,6 +83,6 @@ module.exports = {
   	}
   },
   plugins: [
-	require("tailwindcss-animate"),
+	// require("tailwindcss-animate"),
 ],
 };

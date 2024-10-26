@@ -1,4 +1,4 @@
-import { Poppins,Libre_Caslon_Display,Belleza,Inter,Markazi_Text,Alkatra,Advent_Pro,Ibarra_Real_Nova,Alegreya,Piazzolla,Kreon } from 'next/font/google'
+import { Poppins,STIX_Two_Text ,Sriracha, Metal,Kalam,Libre_Caslon_Display,Belleza,Inter,Markazi_Text,Alkatra,Advent_Pro,Ibarra_Real_Nova,Alegreya,Piazzolla,Kreon, } from 'next/font/google'
 import "../styles/globals.css";
 import localFont from 'next/font/local'
 
@@ -7,6 +7,25 @@ const poppins = Poppins({
   style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-poppins'
+})
+const stix_two_text = STIX_Two_Text({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-stix'
+})
+
+const metal = Metal({
+  weight: '400',   
+  style: 'normal',   
+  subsets: ['latin'],
+  variable: '--font-metal'
+});
+const sriracha = Sriracha({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-kalam'
 })
 const libre_caslon_display = Libre_Caslon_Display({
   weight: ['400'],
@@ -81,6 +100,9 @@ export default function App({ Component, pageProps }) {
     <style jsx global>{`
       :root {
         --font-poppins: ${poppins.style.fontFamily};
+        --font-stix: ${stix_two_text.style.fontFamily};
+        --font-metal: ${metal.style.fontFamily};
+        --font-sriracha: ${sriracha.style.fontFamily};
         --font-librecaslon-display: ${libre_caslon_display.style.fontFamily};
         --font-belleza: ${belleza.style.fontFamily};
         --font-inters: ${inter.style.fontFamily};

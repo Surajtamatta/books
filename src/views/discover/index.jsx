@@ -1,101 +1,67 @@
 import SecondCarousel from '../../components/Carousal/SecondCarousal';
 import Image from 'next/image';
-
+import { booksdata } from '@/json/bookdata';
 const Discover = () => {
-  const books = [
-    {
-      id: '01',
-      title: 'The Humans',
-      imgSrc: '/humansmatt.png',
-    },
-    {
-      id: '02',
-      title: 'The Radleys',
-      imgSrc: '/the-radleys.png',
-    },
-    {
-      id: '03',
-      title: 'The Possessed',
-      imgSrc: '/the-radleys.png',
-    },
-    {
-      id: '01',
-      title: 'The Humans',
-      imgSrc: '/humansmatt.png',
-    },
-    {
-      id: '02',
-      title: 'The Radleys',
-      imgSrc: '/the-radleys.png',
-    },
-    {
-      id: '03',
-      title: 'The Possessed',
-      imgSrc: '/the-radleys.png',
-    },
-  ];
+
 
   return (
-    <section className="flex flex-col justify-center items-center pt-12 sm:pt-16 md:pt-24">
-      <div className="flex w-full flex-col lg:flex-row  justify-between lg:justify-between md:items-start items-center  ">
-        {/* Heading Section */}
-        <div className="flex flex-col justify-center items-center w-full p-8 max-w-[550px] md:px-16 text-left mb-10 sm:mb-12 md:mb-16 ">
-          <div className="w-full max-w-[340px] lg:max-w-[340px] md:max-w-[650px] ">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-ibarrarealnova leading-tight sm:leading-[1.2] md:leading-[1.15]">
-              <span className="italic font-extralight tracking-tight">Discover all</span> my books you were looking for
-            </h1>
-            <p className="mt-4 w-full max-w-[340px] lg:max-w-[340px] md:max-w-[650px] font-inters font-medium text-sm sm:text-base">
-              It&apos;s December, a month of love and lights, but also a busy month of Christmas shopping. We&apos;ve made it easy for you.
-            </p>
-            <a href="#" className="underline mt-8 sm:mt-10 md:mt-14 inline-block font-inters font-semibold text-sm tracking-wide">
-              VIEW ALL 32
-            </a>
-          </div>
-        </div>
-
-        {/* Books Grid Section */}
+    <section className="flex flex-col justify-center items-center  ">
+    <div className='flex flex-col justify-center items-center'>
+    <div className="w-full h-full flex flex-col-reverse sm:flex-row items-center mt-12 sm:mt-14 md:mt-16">
+      
+      {/* <!-- Text Content --> */}
+      <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-start p-4 py-8  sm:p-4 md:p-6 lg:p-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 font-alegreya font-semibold">
+          About the author
+        </h2>
         
-        
-      <div className='w-full lg:max-w-[800px] '>
-      <SecondCarousel data={books} />
+        <p className="w-full text-base  md:text-xl text-justify sm:text-left lg:text-2xl font-poppins font-normal leading-relaxed mb-4">
+          Hi there! I'm Bal, your resident book lover and professional daydreamer.
+        </p>
+  
+        <p className="w-full text-base  md:text-xl text-justify sm:text-left lg:text-2xl font-poppins font-normal leading-relaxed mb-4">
+          When I'm not glued to my keyboard, juggling thirty different novel ideas, or using banter to convince my characters that they're perfect for each other, you can catch me dragging unsuspecting souls into the Great Canadian Outdoors for some fresh air (and a little inspiration).
+        </p>
+  
+        <p className="w-full text-base  md:text-xl text-justify sm:text-left lg:text-2xl font-poppins font-normal leading-relaxed mb-4">
+          When I do write, I love to blend all my favourite things: sports, banter, diversity, and fluff! So, if that sounds like your cup of chai, stick around, and we'll embark on this literary journey together!
+        </p>
       </div>
-      </div>
-
-      {/* Divider */}
-      <div className='w-full h-[1px] bg-black flex justify-center items-center m-24'>
-            <hr className='w-full max-w-[300px] h-1 rounded-full bg-black'/>
-        </div>
-
-      {/* Highlighted Book Section */}
-      <div className="w-full bg-white flex flex-col justify-start md:flex-row items-center mt-12 sm:mt-16 md:mt-20  ">
-        <div className="relative w-full  md:w-1/2 aspect-square mb-6 md:mb-0">
+  
+      {/* <!-- Image Content --> */}
+      <div className="w-full md:w-1/2 p-10 md:p-6 lg:p-16 aspect-square ">
+        <div className="relative w-full h-full">
           <Image
-            src="/the-midnight-library.png"
-            alt="The Midnight Library"
+            src="/girl.png"
+            alt="girl"
             layout="fill"
             objectFit="cover"
-            className="shadow-lg"
+            className="shadow-default rounded-full border-2 border-black w-11/12"
           />
         </div>
-        <div className="md:w-1/2 flex justify-center items-start p-8">
-          <div className="w-full max-w-[450px] flex flex-col justify-center items-start">
-            <h2 className="text-4xl sm:text-4xl md:text-5xl lg:6xl mb-2 font-alegreya font-semibold">
-              The Midnight Library{' '}
-              <span className="font-extralight italic tracking-tighter">The No. 1 Sunday Times</span>{' '}
-              <span className="font-ibarrarealnova font-semibold leading-normal">Bestseller</span>
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg mb-4 max-w-[340px] font-inters font-medium tracking-tight leading-relaxed">
-              Nora&apos;s life has been going from bad to worse. Then, at the stroke of midnight on her last day on Earth, she finds herself
-              transported to a library.
-            </p>
-            <a href="#" className="underline mt-6 sm:mt-8 md:mt-10 inline-block font-inters font-semibold text-sm tracking-wider">
-              VIEW MORE
-            </a>
-          </div>
-        </div>
       </div>
-    </section>
+  
+    </div>
+  
+    {/* <!-- Divider Line --> */}
+    <div  className="w-full hidden sm:flex bg-black h-[1px] justify-center items-center my-12 sm:my-16 md:my-20">
+      <hr className="w-full max-w-xs h-1 bg-black rounded-full" />
+    </div>
+    </div>
+  <div class="flex bg-[#9DB39F]   lg:flex-row lg:justify-between items-center w-full p-6 sm:p-12 lg:p-20 overflow-x-hidden">
+        <SecondCarousel data={booksdata}  />    
+  </div>
+  </section>
+  
   );
 };
 
 export default Discover;
+
+
+
+// jsMath-cmmi10:author
+//Metal
+
+
+//gantari

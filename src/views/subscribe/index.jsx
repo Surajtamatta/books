@@ -14,64 +14,61 @@ const Subscribe = () => {
   ];
 
   return (
-    <section className=" py-12 sm:py-16 md:py-20 flex flex-col justify-center items-center">
+    <section className="w-full flex flex-col justify-center items-center">
       {/* Newsletter Subscription Section */}
-      <div className="w-full bg-white flex flex-col-reverse md:flex-row items-center justify-center md:justify-start">
-        <div className="w-full flex justify-start items-start p-10  md:p-16 md:pl-24 sm:p-24">
-          <div className="w-full max-w-[386px]">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 font-ibarrarealnova font-semibold">
-              <span className="font-extralight italic tracking-tight">Subscribe</span> to my newsletter
-            </h2>
-            <div className="flex border-2 ">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="outline-none focus:border p-3 sm:p-4 rounded-l-md w-full"
-              />
-              <button className="rounded-r-md bg-transparent px-6">
-                <FaArrowRightLong />
-              </button>
-            </div>
-            <p className="text-xs sm:text-sm mt-6 font-inters font-semibold tracking-tight leading-relaxed">
-              By signing up, you agree with our{' '}
-              <span className="underline">Terms & Conditions</span> and{' '}
-              <span className="underline">Privacy Policy.</span> To opt out, click unsubscribe in my
-              emails.
-            </p>
-          </div>
-        </div>
-        <div className="relative w-full max-h-[671px] aspect-square">
-          <Image
-            src="/photos2.png"
-            alt="Man with dog"
-            layout="fill"
-            objectFit="cover"
-            className="shadow-lg"
-          />
-        </div>
-      </div>
+      
+      <div class="bg-[#1f1e28] w-full text-white flex flex-col md:flex-row items-center justify-center px-4 py-8">
+  {/* <!-- Left Section --> */}
+  <div class="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 space-y-6">
+    <h2 class="text-4xl font-semibold italic text-gray-200">Get <span class="not-italic">In Touch.</span></h2>
+    <p class="text-3xl font-light italic text-[#d6d5db]">Questions?</p>
+    <p class="text-lg text-gray-300">SEND ME A MESSAGE OR CONTACT MY TEAM FOR BUSINESS INQUIRIES</p>
 
-      {/* Instagram Section */}
-      <div className="container w-full mt-16 text-center py-12 md:py-16 md:max-w-[1100px] flex flex-col justify-center items-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-[300px] font-bold mb-10 font-ibarrarealnova">
-          <span className="italic font-extralight tracking-tight ">Follow</span> me on Instagram
-        </h2>
-
-        {/* Instagram Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-          {instagramPhotos.map((photo) => (
-            <div key={photo.id} className="relative w-full aspect-[1/1.18]">
-              <Image
-                src={photo.imgSrc}
-                alt={photo.alt}
-                width={256}
-                height={298}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
+    <div class="space-y-4">
+      <div>
+        <p class="font-semibold text-gray-400">LITERARY AGENT:</p>
+        <p>Jessica Watterson</p>
+        <a href="mailto:jessica@dijkstraagency.com" class="text-[#d6d5db] underline">jessica@dijkstraagency.com</a>
       </div>
+      <div>
+        <p class="font-semibold text-gray-400">SUBRIGHTS & LICENSING:</p>
+        <p>Andrea Cavallaro</p>
+        <a href="mailto:andrea@dijkstraagency.com" class="text-[#d6d5db] underline">andrea@dijkstraagency.com</a>
+      </div>
+    </div>
+  </div>
+
+  {/* <!-- Right Section (Form) --> */}
+  <div class="w-full lg:w-1/2 max-w-lg">
+    <form class="space-y-4">
+      <input 
+        type="text" 
+        placeholder="full name" 
+        class="w-full px-4 py-3 bg-transparent border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#d6d5db] rounded-sm"
+        required
+      />
+      <input 
+        type="email" 
+        placeholder="email address" 
+        class="w-full px-4 py-3 bg-transparent border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#d6d5db] rounded-sm"
+        required
+      />
+      <textarea 
+        placeholder="message..." 
+        rows="4" 
+        class="w-full px-4 py-3 bg-transparent border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#d6d5db] rounded-sm"
+        required
+      ></textarea>
+      <button 
+        type="submit" 
+        class="px-6 py-2 bg-transparent border border-gray-500 text-white font-semibold hover:bg-gray-600 rounded-sm"
+      >
+        SEND
+      </button>
+    </form>
+  </div>
+</div>
+
     </section>
   );
 }

@@ -1,10 +1,10 @@
 
- import { MoveLeft, MoveRight } from 'lucide-react';
+
 import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Autoplay from 'embla-carousel-autoplay'; // Import the autoplay plugin
-import Image from 'next/image';
+
 
 const ThirdCarousal = ({ data }) => {
   const [viewportRef, embla] = useEmblaCarousel(
@@ -41,7 +41,7 @@ const ThirdCarousal = ({ data }) => {
             nextBtnEnabled ? '' : 'opacity-25'
             }`}
              >   
-            <MoveLeft className="text-white bg-[#1F1E2C] h-full w-full p-2 sm:p-3 rounded-full z-[1]" />
+            <FaChevronLeft className="text-white bg-[#1F1E2C] h-full w-full p-2 sm:p-3 rounded-full z-[1]" />
         </button>
    
             <div className='w-full lg:max-w-[550px] md:max-w-[380px] sm:max-w-[330px] max-w-[230px] '>
@@ -77,7 +77,7 @@ const ThirdCarousal = ({ data }) => {
             className={`rounded-full h-8 sm:h-14 md:h-16 aspect-square relative bg-gray-800 p-1 flex justify-center items-center ${
             nextBtnEnabled ? '' : 'opacity-25'}`}
             >
-            <MoveRight className="text-white bg-[#1F1E2C] h-full w-full p-2 sm:p-3 rounded-full z-[1]" />
+            <FaChevronRight className="text-white bg-[#1F1E2C] h-full w-full p-2 sm:p-3 rounded-full z-[1]" />
             </button>
        </div>
 

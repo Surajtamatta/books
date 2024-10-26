@@ -23,23 +23,16 @@ const ForthCarousel = ({ data }) => {
 
   return (
     <div className="embla relative">
-      <div className="embla__viewport overflow-hidden py-10" ref={viewportRef}>
+      <div className="embla__viewport overflow-hidden" ref={viewportRef}>
         <div className="embla__container flex">
           {data?.map((book, index) => (
             <div
               key={book.title}
-              className={`embla__slide flex-shrink-0 w-[33%] p-4 max-w-[33%] relative ${
-                index % 2 === 0 ? 'top-6 sm:top-12' : ''
-              }`}
+              className={`embla__slide flex-shrink-0 w-[18%]relative p-4`}
             >
-              <h1 className="mb-2 text-black font-inters font-semibold text-xs text-left">{book.id}</h1>
-              <div className="bg-white p-10 sm:p-14 w-full max-w-[350px] aspect-[17/23] relative flex justify-center">
-                <Image src={book.imgSrc} alt={book.title} width={226} height={340} className='shadow-default'/>
+              <div className=" max-w-[240px] w-full aspect-square relative flex justify-center">
+                <Image src={book.imgSrc} alt={book.title} width={226} height={340}/>
               </div>
-              <h3 className="text-lg sm:text-xl mt-4 sm:mt-5 text-left font-semibold font-markazitext mb-2">
-                {book.title}
-              </h3>
-              
             </div>
           ))}
         </div>

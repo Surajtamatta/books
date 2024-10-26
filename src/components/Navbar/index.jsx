@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="w-full">
       <header className="w-full max-sm:p-4 max-sm:fixed pt-4 px-6 flex justify-between items-center flex-col bg-white shadow z-40">
         {/* Small screen top links */}
-        <div className="hidden max-sm:flex justify-end w-full gap-2 font-inters font-medium">
+        <div className="hidden max-sm:flex font-poppins justify-end w-full gap-2  font-medium">
           <a href="#" className="text-xs hover:text-gray-400 hover:bg-gray-200 transition-colors duration-300">Videos</a>
           <a href="#" className="text-xs hover:text-gray-400 hover:bg-gray-200 transition-colors duration-300">About</a>
           <a href="#" className="text-xs hover:text-gray-400 hover:bg-gray-200 transition-colors duration-300">Search</a>
@@ -22,9 +22,9 @@ const Navbar = () => {
         </div>
 
         {/* Main navbar */}
-        <div className="w-full h-12 flex justify-between items-center">
+        <div className="w-full h-12 flex font-poppins justify-between items-center">
           {/* Left links */}
-          <div className="max-sm:hidden flex gap-5 font-inters font-medium">
+          <div className="max-sm:hidden flex gap-5 font-poppins font-medium">
             <a href="#" className="text-xs hover:underline">Home</a>
             <a href="#" className="text-xs hover:underline">Videos</a>
             <a href="#" className="text-xs hover:underline">About</a>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <h1 className="text-xl z-50  font-poppins font-bold">MATT HAIG</h1>
 
           {/* Right links */}
-          <div className="max-sm:hidden flex gap-5 font-inters font-medium">
+          <div className="max-sm:hidden font-poppins flex gap-5 font-medium">
             <a href="#" className="text-xs hover:underline">Search</a>
             <a href="#" className="text-xs hover:underline">Contact</a>
             <a href="#" className="text-xs hover:underline">Subscribe</a>
