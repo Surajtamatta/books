@@ -33,42 +33,36 @@ const SecondCarousel = ({ data }) => {
           {data?.map((book, index) => (
             <div
               key={index}
-              className="embla__slide flex-shrink-0 p-2 w-full sm:w-[100%]"
+              className="embla__slide flex-shrink-0  w-full sm:w-[100%]"
             >
               <div className="flex flex-col-reverse sm:flex-row items-center">
                 {/* Text Section */}
-                <div className="w-full lg:w-1/2 text-left space-y-4 lg:pr-8 mb-4 lg:mb-0 py-8  ">
-                  <p className="text-sm font-semibold tracking-wide text-gray-800">
+                <div className="w-full lg:w-1/2 text-left space-y-4 lg:pr-8 mb-6 lg:mb-0 py-8   ">
+                  <p className="text-sm text-white font-semibold font-poppins leading-relaxed tracking-wide ">
                     {book.subtitle}
                   </p>
-                  <h2 className="text-2xl sm:text-6xl lg:text-7xl font-sriracha italic uppercase font-black text-[#355D69]">
+                  <h2 className="text-2xl sm:text-6xl lg:text-7xl mt-6 font-sriracha italic uppercase font-black text-[#024771]">
                     {book.title}
                   </h2>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-800 leading-relaxed">
-                    {book.description}
-                  </p>
-                  <div className="flex space-x-4 mt-4">
-                    <button className="bg-[#C1C9B6] text-gray-800 font-normal py-2 px-4 sm:px-6 rounded-md shadow hover:bg-[#B5BEAB]">
+                  <div  
+                  dangerouslySetInnerHTML={{ __html: book.description }} 
+                  className="text-sm sm:text-base lg:text-lg mb-6 text-white font-poppins font-normal leading-relaxed flex flex-col gap-4">
+                  </div>
+                  <div className="flex space-x-4 mt-6 ">
+                    <button className="bg-[#bcd6af] text-gray-800 font-poppins font-normal py-2 px-4 sm:px-6 rounded-md shadow hover:bg-[#B5BEAB]">
                       READ NOW
                     </button>
-                    <button className="bg-[#C1C9B6] text-gray-800 font-normal py-2 px-4 sm:px-6 rounded-md shadow hover:bg-[#B5BEAB]">
+                    <button className="bg-[#bcd6af] text-gray-800 font-normal font-poppins py-2 px-4 sm:px-6 rounded-md shadow hover:bg-[#B5BEAB]">
                       ADD TO GOODREADS
                     </button>
                   </div>
                 </div>
                 {/* Image Section */}
                 <div className="w-full lg:w-1/2 flex justify-end items-center relative p-2">
-                  {/* <button  
-                    onClick={scrollPrev}
-                    disabled={!prevBtnEnabled}
-                    className={`rounded-full h-8 sm:h-14 md:h-16 aspect-square relative bg-gray-800 p-1 flex justify-center items-center ${
-                    nextBtnEnabled ? '' : 'opacity-25'
-                    }`}
-                    >   
-                    <HiOutlineArrowNarrowLeft className="text-white bg-[#1F1E2C] h-full w-full p-2 sm:p-3 rounded-full z-[1]" />
-                </button> */}
 
+                <h1 className='font-puppies absolute left-[-0.5rem] sm:left-0 top-1/4 translate-y-1/4 text-3xl sm:text-2xl  md:text-2xl lg:text-4xl font-black text-[#bcd6af]'>{book.character}</h1>
                   <div className="w-2/3 md:w-2/3 aspect-[1/1.4]  flex justify-end items-center relative ">
+                  
                     <Image
                       src={book.imgSrc}
                       alt={book.title}
@@ -76,7 +70,7 @@ const SecondCarousel = ({ data }) => {
                       objectFit="cover"
                       className="rounded-lg"
                     />
-                    <div className=" w-2/3 absolute bottom-2  left-[-5rem] sm:left-[-4rem] md:left-[-8rem] aspect-[1/1.2] flex justify-end items-center z-4">
+                    <div className=" w-2/3 absolute bottom-2  left-[-5rem] sm:left-[-4rem] md:left-[-8rem] aspect-[1/1.2] flex justify-end items-center">
                     <Image
                         src={book.coverSrc}
                         alt={book.title}
@@ -91,6 +85,7 @@ const SecondCarousel = ({ data }) => {
                         objectFit="contain"
                         className="rounded-lg  "
                       />
+                     
                     </div>
                   <button  
                     onClick={scrollNext}

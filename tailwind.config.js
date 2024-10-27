@@ -65,18 +65,9 @@ module.exports = {
 		  fontFamily: {
 			poppins: ['var(--font-poppins)', 'sans-serif'],
 			stix:['var(--font-stix)','sans-serif'],
-			metal:['var(--font-metal)'],
+			metal:['var(--font-metal)','serif'],
 			sriracha:['var(--font-sriracha)'],
-			librecaslondisplay: ['var(--font-librecaslon-display)', 'serif'],
-			belleza: ['var(--font-belleza)', 'sans-serif'],
-			inters: ['var(--font-inters)', 'sans-serif'],
-			markazitext: ['var(--font-markazitext)', 'serif'],
-			alkatra: ['var(--font-alkatra)', 'cursive'],
-			adventpro: ['var(--font-adventpro)', 'sans-serif'],
-			ibarrarealnova: ['var(--font-ibarrarealnova)', 'serif'],
-			alegreya: ['var(--font-alegreya)', 'serif'],
-			piazzollaa: ['var(--font-piazzollaa)', 'serif'],
-			kreon: ['var(--font-kreon)', 'serif'],
+			puppies:['var(--font-puppies)','cursive'],
 			joaneitalic: ['var(--font-joaneitalic)', 'cursive']
 		  },
 		  
