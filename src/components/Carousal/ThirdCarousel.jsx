@@ -4,12 +4,13 @@ import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Autoplay from 'embla-carousel-autoplay'; // Import the autoplay plugin
+import Fade from 'embla-carousel-fade';
 
 
 const ThirdCarousal = ({ data }) => {
   const [viewportRef, embla] = useEmblaCarousel(
     { loop: true, align: 'center', skipSnaps: false },
-    [Autoplay({ delay: 4000 })] // Add autoplay with a 4-second delay
+    [Autoplay({ delay: 5000 }),Fade({duration:2000})] // Add autoplay with a 4-second delay
   );
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -30,7 +31,7 @@ const ThirdCarousal = ({ data }) => {
     onSelect();
   }, [embla, onSelect]);
 
-//   py-8 sm:py-12 md:py-16 px-6 sm:px-12 md:px-24
+
   return (
     <div className="bg-[#1F1E2C] h-full gap-2 sm:gap-4  max-h-[375px] md:p-6 p-8 sm:py-14 text-white  text-center flex flex-col justify-between items-center">
        <div className='flex w-full justify-between items-center gap-2 sm:gap-4  '>
@@ -51,7 +52,7 @@ const ThirdCarousal = ({ data }) => {
                     {/* Map through the books */}
                     {data?.map((data, index) => (
                         <div
-                        key=  {data?.author}
+                        key=  {index}
                         className="embla__slide flex-shrink-0 w-[100%]   relative"
                         >
                         <p className="text-base max-sm:text-base sm:text-xl md:text-[28px] max-w-2xl mx-auto sm:mt-12 font-piazzollaa italic font-semibold tracking-wide">

@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { booksdata } from '@/json/bookdata';
 import BookCarousel from '../../components/Carousal/FirstCarousel';
+import { Amazon, Target, Barnenobles, Booksmellion, Walmart } from '../../svg/logo';
+
 
 const Hero = () => {
  
@@ -29,21 +31,21 @@ const Hero = () => {
         </h2>
 
         {/* Book Retailer Logos */}
-        <div className="flex justify-between mt-6 sm:mt-8  items-center space-x-4 md:space-x-8 h-auto w-3/4  mx-auto">
-          <div className="w-20 sm:w-24 md:w-32">
-            <Image src="/amazon.png" alt="Amazon" width={155} height={30} className="w-full h-auto" />
+        <div className="flex w-full justify-between mt-6 sm:mt-8  items-center space-x-4 md:space-x-8 h-auto sm:w-3/4 ">
+          <div className="w-20 sm:w-24 md:w-40 cursor-pointer">
+           <Amazon />
           </div>
-          <div className="w-20 sm:w-24 md:w-32">
-            <Image src="/barnes.png" alt="Barnes & Noble" width={120} height={20} className="w-full h-auto" />
+          <div className="w-20 sm:w-24 md:w-40 cursor-pointer">
+          <Barnenobles/>
           </div>
-          <div className="w-20 sm:w-14 md:w-32">
-            <Image src="/target.png" alt="Target" width={110} height={30} className="w-full h-auto" />
+          <div className="w-20 sm:w-14 md:w-32 cursor-pointer">
+          <Target/>
           </div>
-          <div className="w-20 sm:w-24 md:w-32">
-            <Image src="/walmart.png" alt="Walmart" width={135} height={50} className="w-full h-auto" />
+          <div className="w-20 sm:w-24 md:w-40 cursor-pointer">
+           <Walmart/>
           </div>
-          <div className="w-20 sm:w-24 md:w-32">
-            <Image src="/booksamillion.png" alt="Books A Million" width={150} height={33} className="w-full h-auto" />
+          <div className="w-20 sm:w-24 md:w-60 cursor-pointer">
+          <Booksmellion/>
           </div>
         </div>
       </div>

@@ -8,9 +8,9 @@ const Subscribe = () => {
       <div className=" w-full max-w-screen-xl text-white flex flex-col md:flex-row items-start justify-start  gap-6">
 
   {/* <!-- Left Section --> */}
-      <div className="w-full md:w-1/2 h-full flex flex-col text-center lg:text-left mb-8 lg:mb-0 space-y-8">
+      <div className="w-full md:w-2/5 h-full flex flex-col text-center  mb-8 lg:mb-0 space-y-8">
         
-        <p className="text-6xl font-light italic text-[#d6d5db] font-puppies sm:text-9xl">Questions?</p>
+        <p className="text-6xl font-light italic text-[#d6d5db] font-allinpiska sm:text-9xl">Questions?</p>
         <p className="text-lg text-gray-300">SEND ME A MESSAGE OR CONTACT MY TEAM FOR BUSINESS INQUIRIES</p>
 
         <div className="space-y-4">

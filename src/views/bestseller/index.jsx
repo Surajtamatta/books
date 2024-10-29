@@ -25,7 +25,7 @@ const BestSeller = () => {
             <div className="flex flex-col items-center px-6 py-8 mt-10">
               {/* <!-- Heading Section --> */}
               <div className="text-center mb-8">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-stix font-normal text-[#a97a94]">Join my newsletter.</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-stix font-normal text-[#d178b0]">Join my newsletter.</h1>
                 <p className="text-gray-800 text-lg mt-2">STAY UP TO DATE WITH BONUS CONTENT, FREEBIES AND MORE!</p>
               </div>
 
@@ -36,7 +36,7 @@ const BestSeller = () => {
                   <input 
                     type="email" 
                     placeholder="email address" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#a97a94] placeholder-gray-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#d178b0] placeholder-gray-500"
                     required
                   />
 
@@ -69,7 +69,7 @@ const BestSeller = () => {
             <div className='w-full mt-16  h-full '>
             <div className="w-full relative top-[-2rem] lg:top-0 flex items-center justify-start ">
                 <p className="text-gray-800 font-medium text-base mr-2 font-sriracha">Follow me!</p>
-                <a href="https://instagram.com/authorbalkhabra" className="text-[#a97a94] text-lg font-metal font-semibold">@authorbalkhabra</a>
+                <a href="https://instagram.com/authorbalkhabra" className="text-[#d178b0] text-lg font-metal font-semibold">@authorbalkhabra</a>
               </div>
               <FourCarousel data={instagramPhotos} />
                   

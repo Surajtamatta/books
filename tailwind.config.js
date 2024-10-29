@@ -62,13 +62,17 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+		textColor:{
+			pink:' #d178b0'
+		},
 		  fontFamily: {
 			poppins: ['var(--font-poppins)', 'sans-serif'],
 			stix:['var(--font-stix)','sans-serif'],
 			metal:['var(--font-metal)','serif'],
 			sriracha:['var(--font-sriracha)'],
 			puppies:['var(--font-puppies)','cursive'],
-			joaneitalic: ['var(--font-joaneitalic)', 'cursive']
+			joaneitalic: ['var(--font-joaneitalic)', 'cursive'],
+			allinpiska:['var(--font-allinpiska)']
 		  },
 		  
   	}

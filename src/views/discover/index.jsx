@@ -31,7 +31,7 @@ const Discover = () => {
   
       {/* <!-- Image Content --> */}
       <div className="w-full md:w-1/2 p-10 md:p-6 lg:p-16 aspect-square ">
-        <div className="relative w-full h-full rounded-full bg-[#f6c3c7] border-2">
+        <div className="relative w-full h-full rounded-full bg-pink border-2">
           <Image
             src="/girl.png"
             alt="girl"
@@ -49,9 +49,9 @@ const Discover = () => {
       <hr className="w-full max-w-xs h-1 absolute bg-black rounded-full left-[65%]" />
     </div>
     </div>
-  <div className="flex bg-[#6f9278]   lg:flex-row lg:justify-between items-center w-full p-6 sm:p-12 lg:p-20 overflow-x-hidden">
+
         <SecondCarousel data={booksdata}  />    
-  </div>
+  
   </section>
   
   );

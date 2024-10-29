@@ -40,6 +40,12 @@ const joaneitalic = localFont({
   weight: '400',
   variable: '--font-joaneitalic'
 })
+const allinpiska = localFont({ 
+  src: './fonts/Allin-Priska.ttf',
+  style:'italic',
+  weight: '400',
+  variable: '--font-joaneitalic'
+})
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -51,6 +57,7 @@ export default function App({ Component, pageProps }) {
         --font-sriracha: ${sriracha.style.fontFamily};
         --font-puppies: ${puppies.style.fontFamily};
         --font-joaneitalic: ${joaneitalic.style.fontFamily};
+        --font-allinpiska: ${allinpiska.style.fontFamily};
       }`}
     </style>
     <Component {...pageProps} />
