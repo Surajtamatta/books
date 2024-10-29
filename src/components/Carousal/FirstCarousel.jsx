@@ -64,7 +64,7 @@ import BookCover from '../Bookcover';
 const FirstCarousel = ({ data }) => {
   const [viewportRef, embla] = useEmblaCarousel(
     { loop: true, align: 'start', skipSnaps: false },
-    [Autoplay({ delay: 5000 })]
+    [Autoplay({ delay: 4000 })]
   );
 
   const [fadeKey, setFadeKey] = useState(0); // To re-trigger container animation
@@ -81,14 +81,14 @@ const FirstCarousel = ({ data }) => {
   }, [embla, onVisibilityChange]);
   return (
     <div className="embla relative flex pl-8 sm:pl-14 justify-center items-center ">
-      <div className="embla__viewport  w-[65%] sm:w-3/4 max-w-screen-xl overflow-hidden py-10" ref={viewportRef}>
+      <div className="embla__viewport  w-[65%] sm:w-3/4 max-w-screen-xl overflow-hidden p-10" ref={viewportRef}>
         <div 
         key={fadeKey} // Unique key to re-trigger animation on visibility change
-        className=" fade-in-out embla__container flex justify-start">
+        className=" fade-in-out embla__container flex justify-start overflow-x-hidden">
           {data?.map((book, index) => (
             <div
             key={index} // Unique key to re-trigger animation
-              className={`embla__slide clippedImageContainer1  flex-shrink-0  p-1 w-[50%] sm:w-[50%] sm:p-4 relative`}
+              className={`embla__slide  clippedImageContainer1  flex-shrink-0  p-1 w-[50%] sm:w-[50%] sm:p-4 relative`}
             >
               <h1 className="clippedImage2 mb-2 text-black font-inters font-light text-xs">
                 {book.isavailable}

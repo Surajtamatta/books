@@ -114,13 +114,23 @@ body {
 
 
 @keyframes fadeInOut {
-  0% { opacity: 0.3; }
-  /* 50% { opacity: 1; } */
-  100% { opacity: 1;  }
+  0% {
+    opacity: 0.3;
+    transform: scale(1); /* Scale down to 90% of original size */
+  }
+  50% {
+    opacity: 1; 
+    transform: scale(1.1); 
+  }
+  100% {
+    opacity: 1; /* Fade out to invisible */
+    transform: scale(1); /* Scale down to 90% of original size */
+  }
 }
 
 .fade-in-out {
-  animation: fadeInOut 2s ease-in-out; /* Duration and easing can be adjusted */
+  animation: fadeInOut 2s ease-in-out forwards; /* Add forwards to retain end state */
 }
 
+/* Additional styles if needed */
 
