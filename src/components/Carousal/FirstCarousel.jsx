@@ -12,7 +12,7 @@ const FirstCarousel = ({ data }) => {
   // const [currentSlide, setCurrenslide] = useState();
   // console.log(thumbsSwiper)
   return (
-    <div className="w-[100%] max-w-[70%] sm:max-w-[60%] md:max-w-[900px] relative left-2 sm:left-5  mx-auto">
+    <div className="w-[100%] max-w-[80%] sm:max-w-[70%] md:max-w-[900px] relative left-2 sm:left-5  mx-auto">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -40,7 +40,7 @@ const FirstCarousel = ({ data }) => {
           {data?.map((book, index) => (
             <SwiperSlide
               key={index}
-              className="custom-slide flex  flex-col text-left items-center max-w-[200px] sm:max-w-[320px] md:max-w-[500px]"
+              className="custom-slide flex  flex-col text-left items-center max-w-[230px] sm:max-w-[320px] md:max-w-[500px]"
             >
               <h1 className="mb-2 text-black font-inters font-medium text-[8px] sm:text-sm">{book.isavailable}</h1>
               <div className="w-full relative aspect-[1/1.4]">
