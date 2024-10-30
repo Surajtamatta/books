@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Text */}
-        <p className="text-sm text-center text-gray-300">
+        <p className="text-sm text-center text-gray-300 px-6">
           COPYRIGHT © 2024 BAL KHABRA | ALL RIGHTS RESERVED
         </p>
       </div>

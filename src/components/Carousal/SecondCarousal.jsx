@@ -57,7 +57,7 @@ const SecondCarousel = ({ data }) => {
 
   return (
     <div 
-      className="relative w-full h-full flex items-center justify-center mx-auto py-12 px-4"
+      className="relative w-full h-full flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
       style={{ backgroundColor: colors[currentSlideIndex]?.darkColor || 'rgb(255, 255, 255)', 
       transition: 'background-color 0.3s ease-in-out',minHeight:600 }}>
       {isColorReady && (
@@ -87,7 +87,7 @@ const SecondCarousel = ({ data }) => {
                   </h2>
                   <div
                     dangerouslySetInnerHTML={{ __html: book.description }}
-                    className="text-sm sm:text-base lg:text-lg mb-6 text-white font-poppins font-normal leading-relaxed flex flex-col gap-4">
+                    className="text-sm sm:text-base lg:text-lg text-balance mb-6 text-white font-poppins font-normal leading-relaxed flex flex-col gap-4">
                   </div>
                   <div className="flex space-x-4 mt-4">
                     <button

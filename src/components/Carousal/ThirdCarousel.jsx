@@ -23,7 +23,7 @@ const ThirdCarousal = ({ data }) => {
           onClick={() => swiperRef.current.swiper.slidePrev()} // Updated this to slidePrev()
           className={`rounded-full
             hover:bg-[conic-gradient(from_270deg_at_50%_50%,_#ffffff_0%,_#000000_50%)]
-             h-8 sm:h-14 md:h-16 aspect-square relative bg-gray-800 p-1 flex justify-center items-center ${
+             h-8 sm:h-14 md:h-16 aspect-square relative bg-gray-600 p-1 flex justify-center items-center ${
             selectedIndex === 0 ? 'opacity-25' : ''
           }`}
         >
@@ -65,7 +65,7 @@ const ThirdCarousal = ({ data }) => {
           onClick={() => swiperRef.current.swiper.slideNext()}
           className={`rounded-full h-8 sm:h-14 md:h-16 aspect-square relative 
             hover:bg-[conic-gradient(from_90deg_at_50%_50%,_transparent_0%,_#000000_50%,_#ffffff_100%)]
-             bg-gray-800 p-1 flex justify-center items-center ${
+             bg-gray-600 p-1 flex justify-center items-center ${
             selectedIndex === data.length - 1 ? 'opacity-25' : ''
           }`}
         >

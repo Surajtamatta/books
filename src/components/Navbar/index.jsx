@@ -11,14 +11,14 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <header className="w-full max-sm:p-4 max-sm:fixed pt-4 px-6 flex justify-between items-center flex-col bg-white shadow z-40">
+      <header className="w-full max-sm:px-6 py-4 max-sm:fixed pt-4 px-6 flex justify-between items-center flex-col bg-white shadow z-40">
         {/* Small screen top links */}
 
         {/* Main navbar */}
         <div className="w-full h-12 flex font-poppins justify-between items-center">
           {/* Left links */}
           <div className="w-1/2  flex justify-start sm:justify-end gap-5 font-poppins font-medium">
-          <h1 className="text-xl z-50 relative max-sm:px-2  sm:left-16 font-poppins text-pink font-bold">MATT HAIG</h1>
+          <h1 className="text-xl z-50 relative  sm:left-16 font-poppins text-pink font-bold">MATT HAIG</h1>
           </div>
 
           {/* Logo */}

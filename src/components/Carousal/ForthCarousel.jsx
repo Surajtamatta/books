@@ -25,7 +25,7 @@ const ForthCarousel = ({ data }) => {
  
       >
         {data?.map((book, index) => (
-          <SwiperSlide key={index} className="flex max-w-[240px] w-full justify-center items-center">
+          <SwiperSlide key={index} className="flex  max-w-[240px] w-full justify-center items-center">
             <div className="w-full aspect-square relative flex justify-center">
               <Image src={book.imgSrc} alt={book.title} width={226} height={340} />
             </div>

@@ -68,7 +68,7 @@ const BestSeller = () => {
   {/* <!-- Image Grid Section --> */}
             
             <div className='w-full mt-16  h-full '>
-              <div className="w-full relative top-[-2rem] lg:top-0 gap-1 flex items-center justify-start  p-2">
+              <div className="w-full relative sm:top-[-2rem] lg:top-0 gap-1 flex items-center justify-start  py-2">
                 <p className=" font-thin text-base mr-2 font-winslowtitle ">Follow me! </p>
                 <div className='bg-[#d178b0] p-1 rounded-full'>
                 <GrInstagram className=" text-white text-lg font-semibold"/>

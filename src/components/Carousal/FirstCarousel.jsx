@@ -12,7 +12,7 @@ const FirstCarousel = ({ data }) => {
   // const [currentSlide, setCurrenslide] = useState();
   // console.log(thumbsSwiper)
   return (
-    <div className="w-[100%] max-w-[70%] sm:max-w-[60%] md:max-w-[900px] relative left-5  mx-auto">
+    <div className="w-[100%] max-w-[70%] sm:max-w-[60%] md:max-w-[900px] relative left-2 sm:left-5  mx-auto">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
