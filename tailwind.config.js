@@ -55,6 +55,7 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
+			pink:' #d178b0'
 			
   		},
   		borderRadius: {
@@ -62,9 +63,7 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		textColor:{
-			pink:' #d178b0'
-		},
+	
 		  fontFamily: {
 			poppins: ['var(--font-poppins)', 'sans-serif'],
 			stix:['var(--font-stix)','sans-serif'],
@@ -72,7 +71,10 @@ module.exports = {
 			sriracha:['var(--font-sriracha)'],
 			puppies:['var(--font-puppies)','cursive'],
 			joaneitalic: ['var(--font-joaneitalic)', 'cursive'],
-			allinpiska:['var(--font-allinpiska)']
+			allinpiska:['var(--font-allinpiska)'],
+			amerigo:['var(--font-amerigo)','serif'],
+			dmserif:['var(--font-dmserif)'],
+			winslowtitle:['var(--font-winslowtitle)']
 		  },
 		  
   	}

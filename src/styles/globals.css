@@ -112,25 +112,73 @@ body {
 
 
 
-
 @keyframes fadeInOut {
   0% {
-    opacity: 0.3;
-    transform: scale(1); /* Scale down to 90% of original size */
+    opacity: 0;
+    transform: scale(0.9); /* Scale down to 100% of original size */
+  }
+  25% {
+    opacity: 1; 
+    transform: scale(1.1); 
   }
   50% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1.1);
+  }
+  75% {
     opacity: 1; 
     transform: scale(1.1); 
   }
   100% {
     opacity: 1; /* Fade out to invisible */
-    transform: scale(1); /* Scale down to 90% of original size */
+    transform: scale(0.9); /* Scale back to original size */
   }
 }
 
+/* Example usage */
 .fade-in-out {
-  animation: fadeInOut 2s ease-in-out forwards; /* Add forwards to retain end state */
+  animation: fadeInOut 4s ease-in-out forwards; /* Total duration matches the autoplay delay */
 }
 
+
+
 /* Additional styles if needed */
+.custom-swiper {
+  display: flex;
+}
+
+.custom-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  opacity:0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: scale(0.85);
+}
+
+/* Active and second active slide styling */
+.custom-slide.swiper-slide-active,
+.custom-slide.swiper-slide-next {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity  1s ease-in-out, transform 1s ease;
+ 
+ 
+}
+
+/* Apply a lighter fade to the third and fourth slides */
+.custom-slide.swiper-slide-prev,
+.custom-slide.swiper-slide-next + .swiper-slide-next {
+  opacity: 0.2;
+  transition: opacity 1s ease;
+  transform: scale(0.7);
+}
+
+.custom-slide.swiper-slide-prev + .swiper-slide-prev,
+.custom-slide.swiper-slide-next + .swiper-slide-next + .swiper-slide-next {
+  opacity: 0.2;
+  transform: scale(0.7);
+  transition: opacity 1s ease;
+}
 

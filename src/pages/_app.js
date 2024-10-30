@@ -1,4 +1,4 @@
-import { Poppins,STIX_Two_Text,Puppies_Play ,Sriracha, Metal } from 'next/font/google'
+import { Poppins,STIX_Two_Text,Puppies_Play,DM_Serif_Text ,Sriracha, Metal } from 'next/font/google'
 import "../styles/globals.css";
 import localFont from 'next/font/local'
 
@@ -34,6 +34,12 @@ const puppies = Puppies_Play({
   subsets: ['latin'],
   variable: '--font-puppies'
 })
+const dmserif = DM_Serif_Text({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-puppies'
+})
 const joaneitalic = localFont({ 
   src: './fonts/JoaneItalic-ExtraLight.woff',
   style:'italic',
@@ -45,6 +51,18 @@ const allinpiska = localFont({
   style:'italic',
   weight: '400',
   variable: '--font-joaneitalic'
+})
+const amerigo = localFont({ 
+  src: './fonts/Amerigo-BT.ttf',
+  style:'normal',
+  weight: '400',
+  variable: '--font-amerigo'
+})
+const winslowtitle = localFont({ 
+  src: '/fonts/winslow-title-bold-italic.ttf',
+  style:'italic',
+  weight: '400',
+  variable: '--font-winslowtitle'
 })
 export default function App({ Component, pageProps }) {
   return (
@@ -58,6 +76,9 @@ export default function App({ Component, pageProps }) {
         --font-puppies: ${puppies.style.fontFamily};
         --font-joaneitalic: ${joaneitalic.style.fontFamily};
         --font-allinpiska: ${allinpiska.style.fontFamily};
+        --font-amerigo:${amerigo.style.fontFamily};
+        --font-dmserif:${dmserif.style.fontFamily};
+        --font-winslowtitle:${winslowtitle.style.fontFamily}
       }`}
     </style>
     <Component {...pageProps} />

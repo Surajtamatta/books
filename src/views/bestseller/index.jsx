@@ -3,6 +3,7 @@ import FourCarousel from '../../components/Carousal/ForthCarousel';
 import ThirdCarousal from '../../components/Carousal/ThirdCarousel';
 import Image from 'next/image';
 import {instagramPhotos} from '../../json/instaphotos'
+import { GrInstagram } from "react-icons/gr";
 const BestSeller = () => {
  
 
@@ -52,7 +53,7 @@ const BestSeller = () => {
                   By signing up, you agree to our <a href="#" className="underline">Terms of Service</a> and <a href="#" className="underline">Privacy Policy</a>. You can unsubscribe at any time.
                 </p>
                 <div className='relative mt-10 flex justify-end items-start'>
-                <div class=" w-1/3 lg:w-2/5 aspect-square absolute top-[-3rem] lg:top-[-8rem] lg:right-[-15rem] ">
+                <div className=" w-1/3 lg:w-2/5 aspect-square absolute top-[-3rem] md:top-[-8rem] md:right-[-12rem] ">
                 <Image src='/newspaper.png' alt="send image" layout='fill' objectFit='cover'/>
                 </div>
                 </div>
@@ -67,8 +68,11 @@ const BestSeller = () => {
   {/* <!-- Image Grid Section --> */}
             
             <div className='w-full mt-16  h-full '>
-            <div className="w-full relative top-[-2rem] lg:top-0 flex items-center justify-start ">
-                <p className="text-gray-800 font-medium text-base mr-2 font-sriracha">Follow me!</p>
+              <div className="w-full relative top-[-2rem] lg:top-0 gap-1 flex items-center justify-start  p-2">
+                <p className=" font-thin text-base mr-2 font-winslowtitle ">Follow me! </p>
+                <div className='bg-[#d178b0] p-1 rounded-full'>
+                <GrInstagram className=" text-white text-lg font-semibold"/>
+                </div>
                 <a href="https://instagram.com/authorbalkhabra" className="text-[#d178b0] text-lg font-metal font-semibold">@authorbalkhabra</a>
               </div>
               <FourCarousel data={instagramPhotos} />

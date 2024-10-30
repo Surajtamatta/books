@@ -17,7 +17,7 @@ export const booksdata = [
     `
     },
     {
-      is:'02',
+      id:'02',
       title: "Spiral",
       subtitle:'OFF THE ICE #1',
       imgSrc: "/spiralcover.jpg",
@@ -51,7 +51,7 @@ export const booksdata = [
     `
     },
     {
-      is:'04',
+      id:'04',
       title: "Spiral",
       subtitle:'OFF THE ICE #1',
       imgSrc: "/spiralcover.jpg",
@@ -85,7 +85,7 @@ export const booksdata = [
     `
     },
     {
-      is:'06',
+      id:'06',
       title: "Spiral",
       subtitle:'OFF THE ICE #1',
       imgSrc: "/spiralcover.jpg",
@@ -119,7 +119,7 @@ export const booksdata = [
     `
     },
     {
-      is:'08',
+      id:'08',
       title: "Spiral",
       subtitle:'OFF THE ICE #1',
       imgSrc: "/spiralcover.jpg",

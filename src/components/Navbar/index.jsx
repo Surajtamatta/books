@@ -48,7 +48,7 @@ const Navbar = () => {
         >
       
 
-          <div className="w-full max-w-[500px] max-sm:pt-20 h-12 max-sm:h-screen  flex  max-sm:flex-col items-center max-sm:items-start justify-between max-sm:justify-start  font-poppins font-semibold text-xs text-gray-700">
+          <div className="w-full max-w-[500px] max-sm:pt-20 h-12 max-sm:h-screen  flex  max-sm:flex-col items-center max-sm:items-start justify-between max-sm:justify-start  font-poppins font-medium text-xs text-gray-700">
             <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">HOME</a>
             <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">BOOKS</a>
             <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">BONUS</a>

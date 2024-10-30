@@ -12,8 +12,13 @@ const Discover = () => {
       {/* <!-- Text Content --> */}
       <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-start p-6 py-8  sm:p-4 md:p-6 lg:p-16">
         <h2 className="text-3xl sm:text-4xl relative md:text-5xl lg:text-7xl mb-8 font-metal font-thin text-[#d178b0]">
+         <div className='w-24 top-[-1.8rem] left-[-1rem] sm:w-28  md:w-36 sm:top-[-2rem] sm:left-[-1rem] lg:w-52 aspect-square absolute md:top-[-3rem] md:left-[-1rem] lg:top-[-4.3rem] lg:left-[-1.8rem]'>
+          <Image src='/circle.png' alt="send image" 
+          layout="fill"
+            objectFit="cover" />
+         </div>
           About the author
-          <Image src='/send.png' alt="send image" width={150} height={150} className='absolute top-[-3rem] right-[-10rem]'/>
+          <Image src='/send.png' alt="send image" width={160} height={160} className='absolute top-[-3rem] right-[-10rem]'/>
         </h2>
         
         <p className="w-full text-base  md:text-xl text-justify sm:text-left lg:text-2xl font-poppins font-normal leading-relaxed mb-4">
@@ -31,7 +36,7 @@ const Discover = () => {
   
       {/* <!-- Image Content --> */}
       <div className="w-full md:w-1/2 p-10 md:p-6 lg:p-16 aspect-square ">
-        <div className="relative w-full h-full rounded-full bg-pink border-2">
+        <div className="relative w-full h-full rounded-full bg-[#f6c3c8] border-2">
           <Image
             src="/girl.png"
             alt="girl"
@@ -45,8 +50,8 @@ const Discover = () => {
     </div>
   
     {/* <!-- Divider Line --> */}
-    <div  className="w-full hidden relative  sm:flex bg-black h-[1px] justify-center items-center my-12 sm:my-16 md:my-20 ">
-      <hr className="w-full max-w-xs h-1 absolute bg-black rounded-full left-[65%]" />
+    <div  className="w-full hidden relative  sm:flex bg-gray-300 h-[1px] justify-center items-center my-12 sm:my-16 md:my-20 ">
+      <hr className="w-full max-w-[25%] h-1 absolute bg-black  left-[63%]" />
     </div>
     </div>
 

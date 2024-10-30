@@ -14,7 +14,7 @@ const Hero = () => {
 
       {/* Heading Section */}
       <div className="text-center mb-10 sm:mb-12 md:mb-16 ">
-        <h2 className="text-[30px] sm:text-[40px] md:text-[63px] mt-4 font-stix font-normal ">
+        <h2 className="text-[30px] sm:text-[40px] md:text-[63px] mt-4 font-stix italic font- ">
         Off The Ice
         </h2>
         <p className="text-[40px] sm:text-[60px] md:text-[80px] font-stix font-normal leading-8">

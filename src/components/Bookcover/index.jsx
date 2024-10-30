@@ -9,7 +9,7 @@ const BookCover = ({src}) => {
             <path d="M0 54.5L1184 9V2079L0 1964V54.5Z"  fill={`url(#${patternId1})`} />
             <defs>
             <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="5" dy="5" stdDeviation="10" flood-color="black" flood-opacity="0.5"/>
+            <feDropShadow dx="5" dy="5" stdDeviation="10" floodColor="black" floodOpacity="0.5"/>
             </filter>
             <pattern  id={patternId0}  patternContentUnits="objectBoundingBox" width="1" height="1">
                 <use href="#image0_71_20" transform="matrix(0.0118338 0 0 0.0005774 -22.4686 -0.159662)" filter="url(#dropShadow)"/>
