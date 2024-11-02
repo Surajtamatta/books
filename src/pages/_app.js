@@ -1,4 +1,4 @@
-import { Poppins,STIX_Two_Text,Puppies_Play,DM_Serif_Text ,Sriracha, Metal } from 'next/font/google'
+import { Poppins,STIX_Two_Text,Montserrat,Puppies_Play,DM_Serif_Text ,Sriracha, Metal } from 'next/font/google'
 import "../styles/globals.css";
 import localFont from 'next/font/local'
 
@@ -40,6 +40,12 @@ const dmserif = DM_Serif_Text({
   subsets: ['latin'],
   variable: '--font-puppies'
 })
+const montserrat = Montserrat({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-montserrat'
+})
 const joaneitalic = localFont({ 
   src: './fonts/JoaneItalic-ExtraLight.woff',
   style:'italic',
@@ -78,7 +84,8 @@ export default function App({ Component, pageProps }) {
         --font-allinpiska: ${allinpiska.style.fontFamily};
         --font-amerigo:${amerigo.style.fontFamily};
         --font-dmserif:${dmserif.style.fontFamily};
-        --font-winslowtitle:${winslowtitle.style.fontFamily}
+        --font-winslowtitle:${winslowtitle.style.fontFamily};
+        --font-montserrat:${montserrat.style.fontFamily};
       }`}
     </style>
     <Component {...pageProps} />

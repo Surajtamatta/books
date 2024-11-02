@@ -32,19 +32,19 @@ const Hero = () => {
 
         {/* Book Retailer Logos */}
         <div className="flex w-full justify-between mt-6 sm:mt-8  items-center space-x-4 md:space-x-8 h-auto sm:w-3/4 ">
-          <div className="w-20 sm:w-24 md:w-40 cursor-pointer">
+          <div className="w-20 sm:w-24 md:w-36 p-1 cursor-pointer">
            <Amazon />
           </div>
-          <div className="w-20 sm:w-24 md:w-40 cursor-pointer">
+          <div className="w-20 sm:w-24 md:w-36 cursor-pointer">
           <Barnenobles/>
           </div>
-          <div className="w-20 sm:w-14 md:w-32 cursor-pointer">
+          <div className="w-20 sm:w-24 md:w-32 cursor-pointer">
           <Target/>
           </div>
-          <div className="w-20 sm:w-24 md:w-40 cursor-pointer">
+          <div className="w-20 sm:w-24 md:w-36 cursor-pointer">
            <Walmart/>
           </div>
-          <div className="w-20 sm:w-24 md:w-60 cursor-pointer">
+          <div className="w-20 sm:w-24 md:w-52 cursor-pointer">
           <Booksmellion/>
           </div>
         </div>

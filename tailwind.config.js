@@ -74,7 +74,8 @@ module.exports = {
 			allinpiska:['var(--font-allinpiska)'],
 			amerigo:['var(--font-amerigo)','serif'],
 			dmserif:['var(--font-dmserif)'],
-			winslowtitle:['var(--font-winslowtitle)']
+			winslowtitle:['var(--font-winslowtitle)'],
+			montserrat:['var(--font-montserrat)']
 		  },
 		  
   	}
