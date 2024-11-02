@@ -17,9 +17,9 @@ const Navbar = () => {
         {/* Main navbar */}
         <div className="w-full h-12 flex font-poppins justify-between items-center">
           {/* Left links */}
-          <div className="w-1/2 relative flex justify-start sm:justify-end gap-5 font-poppins font-medium">
+          <div className="w-1/2 relative z-50 flex justify-start sm:justify-end gap-5 font-poppins font-medium">
           {/* <h1 className="text-xl z-50 relative  sm:left-16 font-poppins text-pink font-bold">MATT HAIG</h1> */}
-          <Image  src='/logo.png' width={180} height={120}  alt={'logo'} className='relative right-10 sm:left-20'/>
+          <Image  src='/logo.png' width={180} height={120}  alt={'logo'} className='relative right-10  sm:left-20'/>
           </div>
 
           {/* Logo */}
