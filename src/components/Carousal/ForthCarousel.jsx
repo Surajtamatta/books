@@ -24,11 +24,11 @@ const ForthCarousel = ({ data }) => {
         loop={true}
         slidesPerView={'auto'}
         autoplay={{
-          delay: 50, // Continuous slide
+          delay: 1, // Minimal delay between slides for smooth continuous effect
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        speed={4000} // Slow, smooth transition speed
+        speed={5000} // Slow, smooth transition speed to match continuous scroll
         className='transition ease-in-out'
       >
         {data?.map((book, index) => (
