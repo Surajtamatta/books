@@ -48,7 +48,7 @@ const Discover = () => {
     </div>
   
     {/* <!-- Divider Line --> */}
-    <div  className="w-full hidden relative  sm:flex bg-gray-300 h-[1px] justify-center items-center my-12 sm:my-16 md:my-20 ">
+    <div  className="w-full hidden relative  sm:flex bg-gray-300 h-[1px] justify-center items-center  mt-12 md:mt-6 mb-12 sm:mb-16 md:mb-20 ">
       <hr className="w-full max-w-[25%] h-1 absolute bg-black  left-[63%]" />
     </div>
     </div>
