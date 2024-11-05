@@ -14,7 +14,7 @@ const Discover = () => {
         <h2 className="text-3xl flex h-auto sm:text-3xl relative md:text-4xl lg:text-6xl mb-8 font-metal font-thin text-[#d178b0]">
          About the author
          <div className='w-24 sm:w-28  md:w-36 lg:w-48  aspect-square absolute top-[-2rem] right-[-6rem]  sm:top-[-2rem] sm:right-[-8rem]  md:top-[-4rem] md:right-[-12rem] '>
-         <Image src='/send.png' alt="send image" layout='fill' objectFit="contain" className='  '/>
+         <Image src='/send.svg' alt="send image" layout='fill' objectFit="contain" className='  '/>
          </div>
           
         </h2>
