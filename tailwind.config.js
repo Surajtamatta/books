@@ -77,6 +77,11 @@ module.exports = {
 			winslowtitle:['var(--font-winslowtitle)'],
 			montserrat:['var(--font-montserrat)']
 		  },
+		  gridTemplateColumns: {
+
+			'layout': 'repeat(12, 1fr)'
+ 
+		  }
 		  
   	}
   },

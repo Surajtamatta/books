@@ -5,8 +5,11 @@ import { Amazon, Target, Barnenobles, Booksmellion, Walmart } from '../../svg/lo
 
 
 const Hero = () => {
- 
 
+
+  const icons =[
+    Amazon, Target, Barnenobles, Booksmellion, Walmart
+  ]
   return (
     <section className="flex flex-col  justify-center relative items-center pt-32 sm:pt-20 md:pt-24 overflow-x-hidden">
       {/* Background Overlay */}
@@ -30,22 +33,23 @@ const Hero = () => {
           <span className="font-stix italic font-light">Books</span> are available on
         </h2>
 
-        {/* Book Retailer Logos */}
-        <div className="flex w-full justify-between mt-6 sm:mt-8  items-center space-x-4 md:space-x-8 h-auto sm:w-3/4 ">
-          <div className="w-20 sm:w-24 md:w-36 p-1 cursor-pointer">
-           <Amazon />
+
+        <div className="grid grid-cols-6 grid-rows-2 gap-4 mt-6 sm:mt-8 sm:flex sm:justify-between sm:w-3/4 items-center mx-auto">
+          <div className="flex col-span-2 col-start-2 col-end-4 justify-center w-full sm:w-24 md:w-36 p-1 cursor-pointer">
+            <Amazon />
           </div>
-          <div className="w-20 sm:w-24 md:w-36 cursor-pointer">
-          <Barnenobles/>
+          <div className="flex col-span-2 col-start-4 col-end-6 justify-center w-full sm:w-24 md:w-36 cursor-pointer">
+            <Barnenobles />
           </div>
-          <div className="w-20 sm:w-24 md:w-32 cursor-pointer">
-          <Target/>
+     
+           <div className="flex col-span-2  row-start-2 justify-center w-[80%] sm:w-24 md:w-32 cursor-pointer">
+            <Target />
           </div>
-          <div className="w-20 sm:w-24 md:w-36 cursor-pointer">
-           <Walmart/>
+          <div className="flex col-span-2  row-start-2 justify-center w-full sm:w-24 md:w-36 cursor-pointer">
+            <Walmart />
           </div>
-          <div className="w-20 sm:w-24 md:w-52 cursor-pointer">
-          <Booksmellion/>
+          <div className="flex col-span-2  row-start-2 justify-center w-full sm:w-52 cursor-pointer">
+            <Booksmellion />
           </div>
         </div>
       </div>

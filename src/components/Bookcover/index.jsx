@@ -7,12 +7,12 @@ const BookCover = ({src}) => {
   return (
 <div className="w-full relative">
 
-  <Image 
+  {/* <Image 
       src={src}
       alt={'bookcover'}
       layout="fill"
       objectFit="cover"
-    />
+    /> */}
 <svg width="100%" height="100%" viewBox="0 0 2805 3477" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
 <path d="M2063 704V706L2122.47 717L2167.06 728L2206 741L2189.18 2683.53L2063 2770.5L2063 2774V704Z" fill="url(#pattern0_71_20)"/>
 <rect width="2805" height="3477" fill="url(#pattern1_71_20)"/>

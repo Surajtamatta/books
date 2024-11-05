@@ -80,45 +80,7 @@ body {
 
 
 
-/* ClippedImage.module.css */
-.clippedImageContainer {
 
-  perspective: 2200px;
-  height:auto;
-  position: relative;
-}
-.clippedImageContainer1 {
-  perspective: 1000px; /* Adjust for depth effect */
-  height: auto;
-}
-/* Apply the clip-path to the image */
-.clippedImage {
-  width: 100%;
-  height: 100%;
-   transform: perspective(500px) rotateY(-349deg) ; 
-  /* transform-origin: right;  */
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-}
-
-
-.clippedImage2 {
-  position:absolute;
-  top:0;
-  right:0;
-  /* width:100%;
-  transform: rotateY(349deg) rotateX(0deg) rotateZ(0deg) translate3d(4px, 5px, -3px) scale3d(1, 1, 0);
-  transform-origin: right center; */
-  width: 100%;
-  transform: 
-    rotateY(45deg)   
-    rotateX(0deg) 
-    translateZ(0px)
-    skewX(0deg)    
-    scale(1);      
-  transform-origin:right center;
-  transition: transform 0.3s ease; 
-}
 
 
 
@@ -128,25 +90,37 @@ body {
     opacity: 0;
     transform: scale(0.8); /* Scale down to 100% of original size */
   }
-  25% {
+  /* 25% {
     opacity: 1; 
-    transform: scale(1); 
-  }
+    transform: scale(1.1); 
+  } */
   50% {
     opacity: 1; /* Fully visible */
-    transform: scale(1);
+    transform: scale(1.1);
   }
-  75% {
+  /* 75% {
+    opacity: 1; 
+    transform: scale(1.1); 
+  } */
+  100% {
     opacity: 1; 
     transform: scale(1); 
-  }
-  100% {
-    opacity: 0; /* Fade out to invisible */
-    transform: scale(0.8); /* Scale back to original size */
   }
 }
 
+.continuous-scroll .swiper-wrapper {
+  transition-timing-function: linear ;
+}
 
+.continuous-scroll .swiper-slide {
+  width: auto; /* Keep slide width auto for a more dynamic effect */
+}
+
+
+
+.carousel {
+  position: relative;
+}
 .carousel-container {
   position: relative;
   display: flex;
@@ -164,5 +138,35 @@ body {
 
 .carousel-slide.active {
   position: relative;
-  animation: fadeInOut 5s ease-in-out forwards;
+  opacity: 1;
+  animation: fadeInOut 3s ease-in-out forwards;
 }
+
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95); /* Start slightly scaled down */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Scale to full size */
+  }
+}
+
+.carousel-slide1 {
+  opacity: 0; /* Hide by default */
+  display: none; /* Hide non-active slides */
+}
+
+.carousel-slide1.active {
+  display: flex; /* Show the active slide */
+  opacity: 1;
+  animation: fadeIn 3s ease-in-out forwards; /* Apply fade-in animation for 3 seconds */
+}
+
+
+
+

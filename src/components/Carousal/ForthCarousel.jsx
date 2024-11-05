@@ -12,24 +12,34 @@ const ForthCarousel = ({ data }) => {
   // Reference to Swiper instance
   const swiperRef = React.useRef(null);
 
+
+  const swiperOptions = {
+    spaceBetween:20,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    speed: 8000,
+    grabCursor: true,
+    mousewheelControl: true,
+    keyboardcontrol: true,
+    modules:[Autoplay],
+    allowTouchMove:false,
+    className:"continuous-scroll",
+  };
+
+  
   return (
     <div
       className="w-full mx-auto"
       onMouseEnter={() => swiperRef.current && swiperRef.current.autoplay.stop()} // Pause on hover
       onMouseLeave={() => swiperRef.current && swiperRef.current.autoplay.start()} // Resume on hover out
     >
-      <Swiper
-        onSwiper={(swiper) => (swiperRef.current = swiper)} // Store Swiper instance
-        spaceBetween={20}
-        loop={true}
-        slidesPerView={'auto'}
-        autoplay={{
-          delay: 1, // Minimal delay between slides for smooth continuous effect
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
-        speed={5000} // Slow, smooth transition speed to match continuous scroll
-        className='transition ease-in-out'
+      <Swiper 
+       onSwiper={(swiper) => (swiperRef.current = swiper)}
+      {...swiperOptions} 
       >
         {data?.map((book, index) => (
           <SwiperSlide key={index} className="transition ease-in-out flex max-w-[240px] w-full justify-center items-center">

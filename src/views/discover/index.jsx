@@ -11,10 +11,10 @@ const Discover = () => {
       
       {/* <!-- Text Content --> */}
       <div className="w-full  md:w-1/2 h-full flex flex-col justify-center items-start p-6 py-8  sm:p-4 md:p-6 lg:p-16">
-        <h2 className="text-3xl flex h-auto sm:text-4xl relative md:text-5xl lg:text-7xl mb-8 font-metal font-thin text-[#d178b0]">
+        <h2 className="text-3xl flex h-auto sm:text-3xl relative md:text-4xl lg:text-6xl mb-8 font-metal font-thin text-[#d178b0]">
          About the author
          <div className='w-24 sm:w-28  md:w-36 lg:w-48  aspect-square absolute top-[-2rem] right-[-6rem]  sm:top-[-2rem] sm:right-[-8rem]  md:top-[-4rem] md:right-[-12rem] '>
-         <Image src='/send.png' alt="send image" layout='fill' objectFit="contain" className=' t '/>
+         <Image src='/send.png' alt="send image" layout='fill' objectFit="contain" className='  '/>
          </div>
           
         </h2>
@@ -36,11 +36,11 @@ const Discover = () => {
       <div className="w-full md:w-1/2 p-10 md:p-6 lg:p-16 aspect-square ">
         <div className="relative w-full h-full rounded-full bg-[#f6c3c8] border-2">
           <Image
-            src="/girl.png"
+            src="/girl2.png"
             alt="girl"
             layout="fill"
             objectFit="cover"
-            className="shadow-default rounded-full border-2 border-black w-11/12"
+            className="shadow-default  rounded-full border-2 border-black w-11/12"
           />
         </div>
       </div>

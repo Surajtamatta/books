@@ -11,7 +11,8 @@ const Subscribe = () => {
       <div className="w-full md:w-2/5 h-full relative sm:bottom-8 flex flex-col text-center  mb-8 lg:mb-0 space-y-6 sm:space-y-10">
         
         <p className="text-6xl top-10 font-light italic text-[#d6d5db] font-allinpiska sm:text-9xl">Questions?</p>
-        <p className="text-lg text-gray-300">SEND ME A MESSAGE OR CONTACT MY TEAM FOR BUSINESS INQUIRIES</p>
+        <p className="text-lg text-gray-300">SEND ME A MESSAGE OR CONTACT <br/> MY TEAM FOR BUSINESS INQUIRIES
+         </p>
 
           <div className="space-y-2 sm:space-y-4" >
             <p className="font-semibold text-gray-400">LITERARY AGENT:</p>
