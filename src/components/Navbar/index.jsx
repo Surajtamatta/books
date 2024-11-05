@@ -49,13 +49,13 @@ const Navbar = () => {
         >
       
 
-          <div className="w-full max-w-[500px] max-sm:pt-20 h-12 max-sm:h-screen  flex  max-sm:flex-col items-center max-sm:items-start justify-between max-sm:justify-start  font-poppins font-medium text-xs text-gray-700">
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">HOME</a>
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">BOOKS</a>
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">BONUS</a>
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">TRANSLATION</a>
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">CONTACT</a>
-            <a href="#" className="sm:hidden max-sm:w-full max-sm:px-6 max-sm:py-4 font-normal hover:text-gray-500 hover:underline hover:bg-gray-200 transition-colors duration-300">Subscribe !</a>
+          <div className="w-full sm:max-w-[500px] max-sm:pt-20 h-12 max-sm:h-screen  flex  max-sm:flex-col items-center max-sm:items-start justify-between max-sm:justify-start  font-poppins font-medium text-xs text-gray-700">
+            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex justify-stretch hover:text-gray-500 hover:underline transition-colors duration-300">HOME</a>
+            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BOOKS</a>
+            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BONUS</a>
+            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">TRANSLATION</a>
+            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">CONTACT</a>
+            <a href="#" className="sm:hidden max-sm:w-full max-sm:px-6 flex max-sm:py-4 font-normal hover:text-gray-500 hover:underline transition-colors duration-300">Subscribe !</a>
           </div>
         </nav>
       </header>

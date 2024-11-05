@@ -8,7 +8,7 @@ const lightenColor = (color, percent) => {
   const r = (num >> 16) + Math.round((255 - (num >> 16)) * percent);
   const g = ((num >> 8) & 0x00ff) + Math.round((255 - ((num >> 8) & 0x00ff)) * percent);
   const b = (num & 0x0000ff) + Math.round((255 - (num & 0x0000ff)) * percent);
-  return `#${(r < 255 ? r : 255).toString(16).padStart(2, "0")}${(g < 255 ? g : 255).toString(16).padStart(2, "0")}${(b < 255 ? b : 255).toString(16).padStart(2, "0")}`;
+  return `#${(r < 255 ? r : 255).toString(16).padStart(2,"0")}${(g < 255 ? g : 255).toString(16).padStart(2, "0")}${(b < 255 ? b : 255).toString(16).padStart(2, "0")}`;
 };
 
 const SecondCarousel = ({ data }) => {
