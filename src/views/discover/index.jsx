@@ -36,7 +36,7 @@ const Discover = () => {
       <div className="w-full md:w-1/2 p-10 md:p-6 lg:p-16 aspect-square ">
         <div className="relative w-full h-full rounded-full bg-[#f6c3c8] border-2">
           <Image
-            src="/girl2.png"
+            src="/girl.png"
             alt="girl"
             layout="fill"
             objectFit="cover"
