@@ -31,7 +31,7 @@ const FirstCarousel = ({ data }) => {
             </h1>
             <div className="w-full relative aspect-[1/1.2]">
               <Image
-                src={book.cover}
+                src={book.bookcover}
                 alt={`${book.title}`}
                 layout="fill"
                 objectFit="fit"

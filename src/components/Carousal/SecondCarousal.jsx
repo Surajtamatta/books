@@ -84,13 +84,13 @@ const SecondCarousel = ({ data }) => {
                   </h1>
                   <div className="w-[70%] md:w-[70%] aspect-[1/1.3] flex justify-end items-center relative">
                     <Image src={book.bookcover} alt={book.title} layout="fill" objectFit="cover" />
-                    <div className="w-2/3 absolute bottom-2 left-[-5rem] sm:left-[-4rem] md:left-[-8rem] aspect-[1/1.2] flex justify-end items-center">
+                    <div className="w-2/3 absolute bottom-2 left-[-5rem] sm:left-[-4rem] md:left-[-10rem] aspect-[1/1.2] flex justify-end items-center">
                       <Image src={book.imgSrc} alt={book.title} layout="fill" objectFit="contain" className="rounded-lg p-1" />
                       <Image src={'/tablet.png'} alt={'tablet'} layout="fill" objectFit="contain" className="rounded-lg" />
                     </div>
 
                   </div>
-                  <button onClick={handleNext} className="carousel-control right-2 p-1">
+                  <button onClick={handleNext} className="carousel-control absolute right-2 p-1">
                     <HiOutlineArrowNarrowRight className="text-white font-bold text-xl sm:text-3xl" />
                   </button>
                 </div>
