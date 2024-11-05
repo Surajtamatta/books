@@ -20,15 +20,15 @@ const Discover = () => {
         </h2>
         
         <p className="w-full text-base sm:text-sm  md:text-lg text-justify sm:text-left lg:text-2xl font-montserrat  font-normal leading-relaxed mb-4">
-          Hi there! I'm Bal, your resident book lover and professional daydreamer.
+        Hi there! I'm Bal, your resident book lover and professional daydreamer.
         </p>
   
         <p className="w-full text-base sm:text-sm  md:text-lg text-justify sm:text-left lg:text-2xl font-montserrat font-normal leading-relaxed mb-4">
-          When I'm not glued to my keyboard, juggling thirty different novel ideas, or using banter to convince my characters that they're perfect for each other, you can catch me dragging unsuspecting souls into the Great Canadian Outdoors for some fresh air (and a little inspiration).
+        When I'm not glued to my keyboard, juggling thirty different novel ideas, or using banter to convince my characters that they're perfect for each other, you can catch me dragging unsuspecting souls into the Great Canadian Outdoors for some fresh air (and a little inspiration).
         </p>
   
         <p className="w-full text-base sm:text-sm   md:text-lg text-justify sm:text-left lg:text-2xl font-montserrat font-normal leading-relaxed mb-4">
-          When I do write, I love to blend all my favourite things: sports, banter, diversity, and fluff! So, if that sounds like your cup of chai, stick around, and we'll embark on this literary journey together!
+        When I do write, I love to blend all my favourite things: sports, banter, diversity, and fluff! So, if that sounds like your cup of chai, stick around, and we'll embark on this literary journey together!
         </p>
       </div>
   
