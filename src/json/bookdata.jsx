@@ -3,7 +3,7 @@ export const booksdata = [
       id:'01',
       title: "Collide",
       titleimg:'/collidetitle.png',
-      subtitle:'OFF THE ICE #1 1',
+      subtitle:'OFF THE ICE #1',
       imgSrc: "/collidecover.jpg",
       bookcover: "/collidebook.png",
       isavailable:'OUT NOW!',
@@ -17,7 +17,7 @@ export const booksdata = [
     {
       id:'02',
       title: "Spiral",
-      subtitle:'OFF THE ICE #2 2',
+      subtitle:'OFF THE ICE #2',
       titleimg:'/spiraltitle.png',
       bookcover:'/spiralbook.png',
       imgSrc: "/spiralcover.jpg",
