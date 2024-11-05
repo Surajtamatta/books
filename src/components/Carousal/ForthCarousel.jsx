@@ -24,7 +24,6 @@ const ForthCarousel = ({ data }) => {
     speed: 8000,
     grabCursor: true,
     mousewheelControl: true,
-    keyboardcontrol: true,
     modules:[Autoplay],
     allowTouchMove:false,
     className:"continuous-scroll",
