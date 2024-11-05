@@ -31,7 +31,7 @@ const SecondCarousel = ({ data }) => {
   const lightColor = lightenColor(backgroundColor, 0.5);
 
   const handleNext = () => setCurrentSlideIndex((currentSlideIndex + 1) % data.length);
-
+console.log(lightColor)
   return (
     <div 
       className="relative w-full h-full flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
@@ -53,23 +53,23 @@ const SecondCarousel = ({ data }) => {
                   <p className="text-sm text-white font-semibold font-poppins leading-relaxed tracking-wide">
                     {book.subtitle}
                   </p>
-                  <div className="h-16 aspect-[1/0.5] relative w-auto left-0">
+                  <div className="h-16 aspect-[1/0.5] relative w-auto left-0 my-6">
                     <Image src={book.titleimg} alt={book.title} width={300} height={150} className="flex justify-start" />
                   </div>
                   <div
                     dangerouslySetInnerHTML={{ __html: book.description }}
-                    className="text-sm sm:text-base lg:text-lg text-balance mb-6 text-white font-montserrat font-normal leading-relaxed flex flex-col gap-4"
+                    className="text-sm sm:text-base lg:text-lg text-balance my-6 text-white font-montserrat font-normal leading-relaxed flex flex-col gap-4"
                   />
                   <div className="flex space-x-4 mt-4">
                     <button
                       style={{ backgroundColor: lightColor }}
-                      className="max-sm:text-base text-gray-800 font-poppins font-normal py-2 px-4 sm:px-6 rounded-md shadow hover:bg-[#B5BEAB] transition duration-300 ease-in-out"
+                      className={`max-sm:text-base text-gray-800 hover:opacity-75 font-poppins font-normal py-2 px-4 sm:px-6 rounded-md hover:shadow-inner shadow hover:text-gray-100 transition duration-300 ease-in-out`}
                     >
                       READ NOW
                     </button>
                     <button
                       style={{ backgroundColor: lightColor }}
-                      className="max-sm:text-base text-gray-800 font-normal font-poppins py-2 px-4 sm:px-6 rounded-md shadow hover:bg-[#B5BEAB] transition duration-300 ease-in-out"
+                      className="max-sm:text-base text-gray-800  hover:opacity-80 font-normal font-poppins py-2 px-4 sm:px-6 rounded-md hover:shadow-inner shadow hover:text-gray-100 transition duration-300 ease-in-out"
                     >
                       ADD TO GOODREADS
                     </button>
