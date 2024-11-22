@@ -1,53 +1,53 @@
-import React,{useRef} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-coverflow';
-import { Autoplay } from 'swiper/modules';
+
+import React from 'react';
 import Image from 'next/image';
 
-const ForthCarousel = ({ data }) => {
-  const swiperRef = useRef(null);
-
-
-  const swiperOptions = {
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    slidesPerView: 'auto',
-    speed: 3000,
-    modules: [Autoplay],
-    className: "continuous-scroll",
-  };
-
+const CssCarousel = ({ data }) => {
   return (
-    <div
-      className="w-full mx-auto"
-
-    >
-      <Swiper 
-        onSwiper={(swiper) => (swiperRef.current = swiper)} 
-        {...swiperOptions}
-      >
-        {data?.map((book, index) => (
-          <SwiperSlide 
-            key={index} 
-            className="transition ease-in-out flex max-w-[240px] w-full justify-center items-center"
+    <div className="relative w-full overflow-hidden">
+      {/* Scrolling Container */}
+      <div className="flex gap-6 animate-scroll items-center w-max" id="carousel">
+        {data.map((book, index) => (
+          <div
+            key={index}
+            className="w-full aspect-square relative flex justify-center"
           >
-            <div className="w-full aspect-square relative flex justify-center">
-              <Image src={book.imgSrc} alt={book.title} width={226} height={340} />
-            </div>
-          </SwiperSlide>
+            <Image src={book.imgSrc} alt={book.title} width={226} height={340} />
+          </div>
         ))}
-      </Swiper>
+        {data.map((book, index) => (
+          <div
+            key={`${index}-duplicate`}
+            className="w-full aspect-square relative flex justify-center"
+          >
+            <Image src={book.imgSrc} alt={book.title} width={226} height={340} />
+          </div>
+        ))}
+      </div>
+
+
+      <style jsx>{`
+        #carousel {
+          animation: scroll 30s linear infinite;
+        }
+
+        #carousel:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+
+
     </div>
   );
 };
 
-export default ForthCarousel;
+export default CssCarousel;
