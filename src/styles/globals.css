@@ -113,7 +113,7 @@ body {
 }
 
 .continuous-scroll .swiper-slide {
-  width: auto; /* Keep slide width auto for a more dynamic effect */
+  width: auto; 
 }
 
 

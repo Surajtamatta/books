@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 const ForthCarousel = ({ data }) => {
   const swiperRef = useRef(null);
-  const stopTimeoutRef = useRef(null); 
+
 
   const swiperOptions = {
     spaceBetween: 20,
@@ -21,28 +21,10 @@ const ForthCarousel = ({ data }) => {
       pauseOnMouseEnter: true,
     },
     slidesPerView: 'auto',
-    speed: 4000,
-    // grabCursor: true,
-    mousewheel: true, // Corrected this prop
+    speed: 3000,
     modules: [Autoplay],
-    allowTouchMove: false,
     className: "continuous-scroll",
   };
-
-  // const handleMouseEnter = () => {
-  //   if (swiperRef.current) {
-
-  //     swiperRef.current.autoplay.stop(); 
-  // };
-  // }
-
-  // const handleMouseLeave = () => {
-  //   if (swiperRef.current) {
-  //     // setTimeout(() => {
-  //       swiperRef.current.autoplay.start(); 
-  //     // }, 2000); 
-  //   }
-  // };
 
   return (
     <div
