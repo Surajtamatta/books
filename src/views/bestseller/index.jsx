@@ -4,22 +4,14 @@ import ThirdCarousal from '../../components/Carousal/ThirdCarousel';
 import Image from 'next/image';
 import {instagramPhotos} from '../../json/instaphotos'
 import { GrInstagram } from "react-icons/gr";
+import { dummySlides } from '@/json/thoughtsdata';
 const BestSeller = () => {
  
 
-  const dummySlides = [
-    { text: '“A beguiling read, filled with warmth and humour, and a vibrant celebration of the power of books to change lives.”', author: 'THE SUNDAY TIMES' },
-    { text: '“A masterpiece that captivates the soul and the heart.”', author: 'THE GUARDIAN' },
-    { text: '“An extraordinary journey through time and emotion.”', author: 'NEW YORK TIMES' },
-    { text: '“A compelling and heartwarming tale.”', author: 'THE INDEPENDENT' },
-    { text: '“A beguiling read, filled with warmth and humour, and a vibrant celebration of the power of books to change lives.”', author: 'THE SUNDAY TIMES' },
-    { text: '“A masterpiece that captivates the soul and the heart.”', author: 'THE GUARDIAN' },
-    { text: '“An extraordinary journey through time and emotion.”', author: 'NEW YORK TIMES' },
-    { text: '“A compelling and heartwarming tale.”', author: 'THE INDEPENDENT' },
-  ];
+
 
   return (
-    <section className=" text-gray-800  overflow-x-hidden">
+    <section id="subscribe"  className=" text-gray-800  overflow-x-hidden">
       
           <ThirdCarousal  data={dummySlides} />
     

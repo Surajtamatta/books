@@ -1,9 +1,10 @@
 
 import Hero from "../views/hero";
 import Layout from "../components/Layout";
-import Discover from "../views/discover";
+import Books from "../views/books";
 import BestSeller from "../views/bestseller";
-import Subscribe from "../views/subscribe";
+import Subscribe from "../views/contact";
+import About from "@/views/about";
 
 
 
@@ -11,7 +12,8 @@ export default function Home() {
   return (
   <Layout>
     <Hero/>
-    <Discover/>
+    <About/>
+    <Books/>
     <BestSeller/>
     <Subscribe/>
   </Layout>

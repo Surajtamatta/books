@@ -33,7 +33,8 @@ const SecondCarousel = ({ data }) => {
   const handleNext = () => setCurrentSlideIndex((currentSlideIndex + 1) % data.length);
 console.log(lightColor)
   return (
-    <div 
+    <section 
+     id='#books'
       className="relative w-full h-full flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
       style={{ 
         backgroundColor: backgroundColor,
@@ -101,7 +102,7 @@ console.log(lightColor)
 
         
       </div>
-    </div>
+    </section>
   );
 };
 

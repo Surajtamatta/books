@@ -96,7 +96,7 @@ body {
   } */
   50% {
     opacity: 1; /* Fully visible */
-    transform: scale(1.1);
+    transform: scale(1);
   }
   /* 75% {
     opacity: 1; 
@@ -148,7 +148,7 @@ body {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: scale(0.95); /* Start slightly scaled down */
+    transform: scale(1); /* Start slightly scaled down */
   }
   100% {
     opacity: 1;
@@ -157,15 +157,55 @@ body {
 }
 
 .carousel-slide1 {
-  opacity: 0; /* Hide by default */
-  display: none; /* Hide non-active slides */
+  opacity: 0; 
+  display: none; 
 }
 
 .carousel-slide1.active {
   display: flex; /* Show the active slide */
   opacity: 1;
-  animation: fadeIn 3s ease-in-out forwards; /* Apply fade-in animation for 3 seconds */
+  animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation for 3 seconds */
 }
+
+
+
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #cab7ffd3 0%,
+    #fca5f1 29%,
+    #d8a5fcb6 67%,
+    #b5ffffcb 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 

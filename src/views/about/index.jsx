@@ -1,13 +1,11 @@
 import SecondCarousel from '../../components/Carousal/SecondCarousal';
 import Image from 'next/image';
 import { booksdata } from '@/json/bookdata';
-const Discover = () => {
-
-
+const About = () => {
   return (
-    <section className="flex flex-col justify-center items-center  ">
+    <section id='about' className="flex flex-col justify-center items-center  ">
     <div className='flex flex-col justify-center items-center overflow-hidden'>
-    <div className="w-full h-full flex flex-col-reverse sm:flex-row items-center mt-12 sm:mt-14 md:mt-16">
+    <div  className="w-full h-full flex flex-col-reverse sm:flex-row items-center mt-12 sm:mt-14 md:mt-16">
       
       {/* <!-- Text Content --> */}
       <div className="w-full  md:w-1/2 h-full flex flex-col justify-center items-start p-6 py-8  sm:p-4 md:p-6 lg:p-16">
@@ -48,24 +46,13 @@ const Discover = () => {
     </div>
   
     {/* <!-- Divider Line --> */}
-    <div  className="w-full hidden relative  sm:flex bg-gray-300 h-[1px] justify-center items-center  mt-12 md:mt-6 mb-12 sm:mb-16 md:mb-20 ">
-      <hr className="w-full max-w-[25%] h-1 absolute bg-black  left-[63%]" />
+   
     </div>
-    </div>
-
-        <SecondCarousel data={booksdata}  />    
-  
+   
   </section>
   
   );
 };
 
-export default Discover;
+export default About;
 
-
-
-// jsMath-cmmi10:author
-//Metal
-
-
-//gantari

@@ -2,7 +2,7 @@
 const Subscribe = () => {
 
   return (
-    <section className="w-full bg-[#1f1e2c] p-6 py-10 flex flex-col  justify-end items-center">
+    <section id='contact' className="w-full bg-[#1f1e2c] p-6 py-10 flex flex-col  justify-end items-center">
       {/* Newsletter Subscription Section */}
       <h2 className="py-4 sm:py-16 text-4xl sm:text-7xl font-thin italic font-metal  text-gray-200">Get <span className="not-italic font-stix ">In Touch.</span></h2>
       <div className=" w-full max-w-screen-xl text-white flex flex-col md:flex-row items-end justify-start  gap-6">

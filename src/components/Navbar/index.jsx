@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars } from "react-icons/fa6";
 import { GiCrossMark } from "react-icons/gi";
 import Image from 'next/image';
+import Link from 'next/link';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -27,7 +28,7 @@ const Navbar = () => {
 
           {/* Right links */}
           <div className="w-1/2 flex justify-end max-sm:hidden font-poppins  gap-5 font-medium">
-            <a href="#" className="text-xs hover:underline">Subscribe</a>
+            <a href="#subscribe" className="text-xs hover:underline">Subscribe</a>
           </div>
 
           {/* Hamburger Icon */}
@@ -51,10 +52,19 @@ const Navbar = () => {
 
           <div className="w-full sm:max-w-[500px] max-sm:pt-20 h-12 max-sm:h-screen  flex  max-sm:flex-col items-center max-sm:items-start justify-between max-sm:justify-start  font-poppins font-medium text-xs text-gray-700">
             <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex justify-stretch hover:text-gray-500 hover:underline transition-colors duration-300">HOME</a>
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BOOKS</a>
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BONUS</a>
+
+            <a href="#books" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BOOKS</a>
+
+            <Link href={'/bonus'}>
+            <h1 className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BONUS</h1>
+            </Link>
+            {/* <Link href={'/translation'}>
+            <h1 className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">TRANSLATION</h1>
+            </Link> */}
             <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">TRANSLATION</a>
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">CONTACT</a>
+
+            <a href="#contact" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">CONTACT</a>
+
             <a href="#" className="sm:hidden max-sm:w-full max-sm:px-6 flex max-sm:py-4 font-normal hover:text-gray-500 hover:underline transition-colors duration-300">Subscribe !</a>
           </div>
         </nav>

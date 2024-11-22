@@ -1,5 +1,10 @@
 import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
+
+
+
+
+
 const Footer = () => {
   return (
     <footer className="bg-[#1f1e28] text-white py-8">
