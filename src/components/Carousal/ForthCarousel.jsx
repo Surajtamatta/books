@@ -21,7 +21,7 @@ const ForthCarousel = ({ data }) => {
       pauseOnMouseEnter: true,
     },
     slidesPerView: 'auto',
-    speed: 5000,
+    speed: 4000,
     // grabCursor: true,
     mousewheel: true, // Corrected this prop
     modules: [Autoplay],
