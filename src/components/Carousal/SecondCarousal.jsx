@@ -35,7 +35,7 @@ console.log(lightColor)
   return (
     <section 
      id='#books'
-      className="relative w-full h-full flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
+      className="relative w-full h-screen flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
       style={{ 
         backgroundColor: backgroundColor,
         transition: 'background-color 0.3s ease-in-out', 

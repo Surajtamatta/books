@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const CssCarousel = ({ data }) => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative  w-full overflow-hidden">
       {/* Scrolling Container */}
       <div className="flex gap-6 animate-scroll items-center w-max" id="carousel">
         {data.map((book, index) => (

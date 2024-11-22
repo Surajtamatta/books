@@ -164,7 +164,7 @@ body {
 .carousel-slide1.active {
   display: flex; /* Show the active slide */
   opacity: 1;
-  animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation for 3 seconds */
+  animation: fadeIn 0.5s ease-in-out forwards; /* Apply fade-in animation for 3 seconds */
 }
 
 
