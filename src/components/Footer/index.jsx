@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="flex flex-col items-center space-y-4">
         {/* Social Media Icons */}
         <div className="flex space-x-6 text-3xl">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/authorbalkhabra/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <FaInstagram className="hover:text-gray-400 transition-colors duration-200" />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

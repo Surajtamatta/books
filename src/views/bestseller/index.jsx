@@ -65,7 +65,7 @@ const BestSeller = () => {
                 <div className='bg-[#d178b0] p-1 rounded-full'>
                 <GrInstagram className=" text-white text-lg font-semibold"/>
                 </div>
-                <a href="https://instagram.com/authorbalkhabra" className="text-[#d178b0] text-lg font-metal font-semibold">@authorbalkhabra</a>
+                <a href="https://www.instagram.com/authorbalkhabra/" className="text-[#d178b0] text-lg font-metal font-semibold">@authorbalkhabra</a>
               </div>
               <FourCarousel data={instagramPhotos} />
                   
