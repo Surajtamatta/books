@@ -175,10 +175,10 @@ body {
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #cab7ffd3 0%,
+    #a797edd3 0%,
     #fca5f1 29%,
-    #d8a5fcb6 67%,
-    #b5ffffcb 100%
+    #c77fe8e3 67%,
+    #bb90ffd9 100%
   );
   background-size: auto auto;
   background-clip: border-box;
