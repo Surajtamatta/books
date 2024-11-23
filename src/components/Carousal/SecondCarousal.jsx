@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Utility function to lighten a color by a given percentage
 const lightenColor = (color, percent) => {
@@ -62,18 +63,24 @@ const SecondCarousel = ({ data }) => {
                     className="text-sm sm:text-base lg:text-lg text-balance my-6 text-white font-montserrat font-normal leading-relaxed flex flex-col gap-4"
                   />
                   <div className="flex space-x-4 mt-4">
+                   <Link href={book.read}>
                     <button
                       style={{ backgroundColor: lightColor }}
                       className={`max-sm:text-base text-gray-800 hover:opacity-75 font-poppins font-normal py-2 px-4 sm:px-6 rounded-md hover:shadow-inner shadow hover:text-gray-100 transition duration-300 ease-in-out`}
                     >
                       READ NOW
                     </button>
+                    </Link>
+                    <Link href={book.goodreads}>
                     <button
                       style={{ backgroundColor: lightColor }}
                       className="max-sm:text-base text-gray-800  hover:opacity-80 font-normal font-poppins py-2 px-4 sm:px-6 rounded-md hover:shadow-inner shadow hover:text-gray-100 transition duration-300 ease-in-out"
+                      
                     >
                       ADD TO GOODREADS
                     </button>
+                    </Link>
+                   
                   </div>
                 </div>
                 <div className="w-full lg:w-1/2 flex justify-end items-center relative p-2">

@@ -16,7 +16,7 @@ const BestSeller = () => {
       
           <ThirdCarousal  data={dummySlides} />
     
-            <section id="subscribe" className="relative flex sm:min-h-screen  max-h-[950px]  flex-col justify-evenly  sm:justify-evenly  items-center px-6 py-8 ">
+            <section id="subscribe" className="relative flex sm:min-h-screen    flex-col justify-evenly  sm:justify-evenly  items-center px-6 py-8 ">
               {/* <!-- Heading Section --> */}
               <div className='flex flex-col gap-6 sm:mb-10  sm:top-6'>
               {/* <div className="text-center mb-8 ">
@@ -44,7 +44,7 @@ const BestSeller = () => {
 
 
             
-            <div className='w-full relative mt-16  sm:top-6'>
+            <div className='w-full relative mt-14  sm:top-6'>
               <div className="w-full group  relative sm:top-[-1rem] gap-1 flex items-center justify-start  py-2">
                 <p className=" font-thin text-base mr-2 font-winslowtitle ">Follow me! </p>
                 <div className='bg-[#d178b0]  group-hover:bg-[#ff92d7] p-1 rounded-full'>

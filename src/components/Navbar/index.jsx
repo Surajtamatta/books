@@ -13,34 +13,36 @@ const Navbar = ({variants}) => {
   return (
     <div className="w-full h-full max-h-28">
       <header className={`w-full
-      max-sm:px-6 py-4 pt-4 px-6 flex justify-between items-center  bg-white shadow z-40
-      ${variants === "other" ? 
-        `flex-row ${menuOpen ? 'absolute top-0' : ''}`
-        : 
-        'flex-col max-sm:fixed'
+      max-sm:px-6 py-4 pt-4 px-6 flex justify-between items-center   bg-white shadow z-40
+      flex-col max-sm:fixed
       } 
       `}
       > 
         <div className="w-full h-12 flex font-poppins justify-between items-center ">
-   
+  
           <div className={`
           w-1/2 relative z-50 flex justify-start  gap-5 font-poppins font-medium
-          ${variants === "other" ? 'justify-start sm:justify-start' : 'sm:justify-end'} 
+         sm:justify-end
           `}>
           <Image  src='/logo.png' width={180} height={120}  alt={'logo'} className={`
             relative
-            ${variants === "other" ? ' right-10 sm:left-[-3rem]' : ' right-10  sm:left-24'} 
+            right-10  sm:left-24
             `}/>
           </div>
 
          
-          {variants === "other" ? "" :
+          
           <div className="w-1/2 flex justify-end max-sm:hidden font-poppins  gap-5 font-medium">
+           {/* {variants === "other" ?  */}
+          <Link href={'/#subscribe'} className="bg-[#d394e2] text-white p-2 sm:px-4 sm:py-2 rounded-md shadow-sm hover:bg-[#f2b1ff]">
+           Subscribe!
+            </Link>
+            {/* :
             <Link href={'/#subscribe'}>
             <h1 className="text-xs hover:underline text-[#d394e2]">Subscribe</h1>
             </Link>
-            
-          </div>}
+            } */}
+          </div>
 
           {/* Hamburger Icon */}
           <div className="hidden max-sm:flex justify-end z-50">
@@ -56,7 +58,7 @@ const Navbar = ({variants}) => {
             menuOpen ? 'block' : 'hidden'
           } max-sm:fixed w-full inset-0 bg-white bg-opacity-70 backdrop-blur-md z-40  flex max-sm:justify-start
           transition-transform duration-500 ease-in-out transform 
-          ${variants === "other" ? ' justify-end  ' : ' justify-center '} 
+         justify-center
           max-sm:${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`
