@@ -18,7 +18,7 @@ const ComingSoon = ({ content }) => {
     <Navbar variants="other" />
   
      <div className="w-full h-full flex items-center justify-center ">
-     <div className="bg-white z-10 shadow-xl flex flex-col items-center justify-evenly rounded w-[90%] md:w-full max-w-5xl h-96 mt-8 p-6 md:p-8 space-y-6">
+     <div className="bg-white z-10 shadow-xl flex flex-col items-center justify-evenly rounded w-[80%]  max-w-2xl h-96 mt-8 p-6 md:p-8 space-y-6">
         <h2 className="animate-charcter text-3xl md:text-5xl  font-bold text-gray-800 text-center">
           {content} Content
         </h2>

@@ -36,7 +36,10 @@ const Navbar = ({variants}) => {
          
           {variants === "other" ? "" :
           <div className="w-1/2 flex justify-end max-sm:hidden font-poppins  gap-5 font-medium">
-            <a href="#subscribe" className="text-xs hover:underline">Subscribe</a>
+            <Link href={'/#subscribe'}>
+            <h1 className="text-xs hover:underline">Subscribe</h1>
+            </Link>
+            
           </div>}
 
           {/* Hamburger Icon */}
@@ -59,9 +62,11 @@ const Navbar = ({variants}) => {
       
 
           <div className="w-full sm:max-w-[500px] max-sm:pt-20 h-12 max-sm:h-screen  flex  max-sm:flex-col items-center max-sm:items-start justify-between max-sm:justify-start  font-poppins font-medium text-xs text-gray-700">
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex justify-stretch hover:text-gray-500 hover:underline transition-colors duration-300">HOME</a>
+            <a href="/" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex justify-stretch hover:text-gray-500 hover:underline transition-colors duration-300">HOME</a>
 
-            <a href="#books" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BOOKS</a>
+            <Link href={'/#books'}>
+            <h1  className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BOOKS</h1>
+            </Link>
 
             <Link href={'/bonus'}>
             <h1 className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">BONUS</h1>
@@ -69,11 +74,16 @@ const Navbar = ({variants}) => {
             {/* <Link href={'/translation'}>
             <h1 className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">TRANSLATION</h1>
             </Link> */}
-            <a href="#" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">TRANSLATION</a>
+            <Link href={'/'}>
+            <h1 className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">TRANSLATION</h1>
+            </Link>
+            <Link href={'/#contact'}>
+            <h1 className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">CONTACT</h1>
+            </Link>
+            <Link href={'/#subscribe'}> 
+            <h1 className="sm:hidden max-sm:w-full max-sm:px-6 flex max-sm:py-4 font-normal hover:text-gray-500 hover:underline transition-colors duration-300">Subscribe !</h1>
+            </Link>
 
-            <a href="#contact" className="max-sm:w-full max-sm:px-6 max-sm:py-4 flex hover:text-gray-500 hover:underline  transition-colors duration-300">CONTACT</a>
-
-            <a href="#" className="sm:hidden max-sm:w-full max-sm:px-6 flex max-sm:py-4 font-normal hover:text-gray-500 hover:underline transition-colors duration-300">Subscribe !</a>
           </div>
         </nav>
       </header>
