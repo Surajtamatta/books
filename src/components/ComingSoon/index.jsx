@@ -8,9 +8,9 @@ const ComingSoon = ({ content }) => {
     <div className="w-full h-screen relative bg-[#F8F3EC] flex flex-col items-center">
     <div className="bg-[#1f1e2c]  w-full h-2/5 absolute bottom-0 z-0" />
       <header className="w-full bg-[#d294e2a7] text-center py-5 md:py-7 px-4">
-        <p className="text-base md:text-lg font-medium text-[#ffffff] flex flex-col md:flex-row gap-4 justify-center items-center">
+        <p className="text-xs sm:text-lg font-medium text-[#ffffff] flex flex-col md:flex-row gap-2 sm:gap-4 justify-center items-center">
           Want to be the first to know? Subscribe to my newsletter:{" "}
-          <Link href={'/#subscribe'} className="bg-[#d394e2] text-white px-4 py-2 rounded-md shadow-lg hover:bg-[#f2b1ff]">
+          <Link href={'/#subscribe'} className="bg-[#d394e2] text-white p-2 sm:px-4 sm:py-2 rounded-md shadow-lg hover:bg-[#f2b1ff]">
             Click to Subscribe
           </Link>
         </p>

@@ -13,11 +13,11 @@ const Navbar = ({variants}) => {
   return (
     <div className="w-full h-full max-h-28">
       <header className={`w-full
-      max-sm:px-6 py-4 max-sm:fixed pt-4 px-6 flex justify-between items-center  bg-white shadow z-40
+      max-sm:px-6 py-4 pt-4 px-6 flex justify-between items-center  bg-white shadow z-40
       ${variants === "other" ? 
         `flex-row ${menuOpen ? 'absolute top-0' : ''}`
         : 
-        'flex-col'
+        'flex-col max-sm:fixed'
       } 
       `}
       > 
