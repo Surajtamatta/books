@@ -1,11 +1,13 @@
+import Footer from "@/components/Footer";
 
 const Subscribe = () => {
 
   return (
-    <section id='contact' className="w-full bg-[#1f1e2c] p-6 py-10 flex flex-col  justify-end items-center">
+    <section id='contact' className="w-full sm:h-[90vh]   bg-[#1f1e2c] p-6">
       {/* Newsletter Subscription Section */}
-      <h2 className="py-4 sm:py-16 text-4xl sm:text-7xl font-thin italic font-metal  text-gray-200">Get <span className="not-italic font-stix ">In Touch.</span></h2>
-      <div className=" w-full max-w-screen-xl text-white flex flex-col md:flex-row items-end justify-start  gap-6">
+    <div className="flex flex-col justify-between items-center">
+    <h2 className="mb-8 py-6 sm:py-20 text-4xl sm:text-7xl font-thin italic font-metal  text-gray-200">Get <span className="not-italic font-stix ">In Touch.</span></h2>
+      <div className=" w-full max-w-screen-xl text-white flex flex-col sm:flex-row items-center lg:items-end justify-start  gap-6">
 
   {/* <!-- Left Section --> */}
       <div className="w-full md:w-2/5 h-full relative sm:bottom-8 flex flex-col text-center  mb-8 lg:mb-0 space-y-6 sm:space-y-10">
@@ -57,6 +59,7 @@ const Subscribe = () => {
     </form>
   </div>
 </div>
+    </div>
 
     </section>
   );

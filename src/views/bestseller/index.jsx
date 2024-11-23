@@ -5,72 +5,57 @@ import Image from 'next/image';
 import {instagramPhotos} from '../../json/instaphotos'
 import { GrInstagram } from "react-icons/gr";
 import { dummySlides } from '@/json/thoughtsdata';
+import Form from '@/components/Form';
 const BestSeller = () => {
  
 
 
 
   return (
-    <section id="subscribe"  className=" text-gray-800  overflow-x-hidden">
+    <section>
       
           <ThirdCarousal  data={dummySlides} />
     
-            <div className="flex flex-col items-center px-6 py-8 mt-10">
+            <section id="subscribe" className="relative flex sm:h-screen 2xl:max-h-[1200px] flex-col justify-evenly  sm:justify-evenly  items-center px-6 py-8 ">
               {/* <!-- Heading Section --> */}
-              <div className="text-center mb-8">
+              <div className='flex flex-col gap-6 sm:mb-10  sm:top-6'>
+              <div className="text-center mb-8 ">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-stix font-normal text-[#d178b0]">Join my newsletter.</h1>
                 <p className="text-gray-800 text-lg mt-2">STAY UP TO DATE WITH BONUS CONTENT, FREEBIES AND MORE!</p>
               </div>
 
               {/* <!-- Newsletter Form Section --> */}
               <div className="w-full max-w-lg mx-auto ">
-                <form className="space-y-8">
-                  {/* <!-- Email Input --> */}
-                  <input 
-                    type="email" 
-                    placeholder="email address" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#d178b0] placeholder-gray-500"
-                    required
-                  />
-
-                  {/* <!-- Subscribe Button --> */}
-                  <button 
-                    type="submit" 
-                    className="w-full bg-black text-white font-medium py-3 rounded-md  shadow-md hover:bg-gray-800"
-                  >
-                    subscribe!
-                  </button>
-                </form>
+                <Form/>
                 <p className="text-center text-xs text-gray-600 mt-4">
                   By signing up, you agree to our <a href="#" className="underline">Terms of Service</a> and <a href="#" className="underline">Privacy Policy</a>. You can unsubscribe at any time.
                 </p>
+              </div>
+
+
+
                 <div className='relative mt-10 flex justify-end items-start'>
-                <div className=" w-1/3 lg:w-2/5 aspect-square absolute top-[-3rem] md:top-[-8rem] md:right-[-12rem] ">
+                <div className=" w-1/3 lg:w-2/5 aspect-square absolute top-[-5rem] md:top-[-6rem] md:right-[-6rem]  lg:right-[-12rem] ">
                 <Image src='/newspaper.png' alt="send image" layout='fill' objectFit='cover'/>
                 </div>
                 </div>
+
               </div>
 
-              {/* <!-- Follow Me Section --> */}
-             
 
-              {/* <!-- Decorative Newspaper Image --> */}
-
-
-  {/* <!-- Image Grid Section --> */}
             
-            <div className='w-full mt-16  h-full '>
-              <div className="w-full relative sm:top-[-2rem] lg:top-0 gap-1 flex items-center justify-start  py-2">
+            <div className='w-full relative mt-16  sm:top-6'>
+              <div className="w-full group  relative sm:top-[-1rem] gap-1 flex items-center justify-start  py-2">
                 <p className=" font-thin text-base mr-2 font-winslowtitle ">Follow me! </p>
-                <div className='bg-[#d178b0] p-1 rounded-full'>
+                <div className='bg-[#d178b0]  group-hover:bg-[#ff92d7] p-1 rounded-full'>
                 <GrInstagram className=" text-white text-lg font-semibold"/>
                 </div>
-                <a href="https://www.instagram.com/authorbalkhabra/" className="text-[#d178b0] text-lg font-metal font-semibold">@authorbalkhabra</a>
+                <a href="https://www.instagram.com/authorbalkhabra/" className="text-[#d178b0] group-hover:text-[#ff95d8]  text-lg font-metal font-semibold">@authorbalkhabra</a>
               </div>
               <FourCarousel data={instagramPhotos} />
                   
             </div>
-          </div>
+          </section>
 
     </section>
   );

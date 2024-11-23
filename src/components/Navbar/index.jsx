@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa6";
 import { GiCrossMark } from "react-icons/gi";
 import Image from 'next/image';
 import Link from 'next/link';
-const Navbar = () => {
+const Navbar = ({variants}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,24 +12,32 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-full max-h-28">
-      <header className="w-full max-sm:px-6 py-4 max-sm:fixed pt-4 px-6 flex justify-between items-center flex-col bg-white shadow z-40">
-        {/* Small screen top links */}
-
-        {/* Main navbar */}
-        <div className="w-full h-12 flex font-poppins justify-between items-center">
-          {/* Left links */}
-          <div className="w-1/2 relative z-50 flex justify-start sm:justify-end gap-5 font-poppins font-medium">
-          {/* <h1 className="text-xl z-50 relative  sm:left-16 font-poppins text-pink font-bold">MATT HAIG</h1> */}
-          <Image  src='/logo.png' width={180} height={120}  alt={'logo'} className='relative right-10  sm:left-20'/>
+      <header className={`w-full
+      max-sm:px-6 py-4 max-sm:fixed pt-4 px-6 flex justify-between items-center  bg-white shadow z-40
+      ${variants === "other" ? 
+        `flex-row ${menuOpen ? 'absolute top-0' : ''}`
+        : 
+        'flex-col'
+      } 
+      `}
+      > 
+        <div className="w-full h-12 flex font-poppins justify-between items-center ">
+   
+          <div className={`
+          w-1/2 relative z-50 flex justify-start  gap-5 font-poppins font-medium
+          ${variants === "other" ? 'justify-start sm:justify-start' : 'sm:justify-end'} 
+          `}>
+          <Image  src='/logo.png' width={180} height={120}  alt={'logo'} className={`
+            relative
+            ${variants === "other" ? ' right-10 sm:left-[-3rem]' : ' right-10  sm:left-24'} 
+            `}/>
           </div>
 
-          {/* Logo */}
          
-
-          {/* Right links */}
+          {variants === "other" ? "" :
           <div className="w-1/2 flex justify-end max-sm:hidden font-poppins  gap-5 font-medium">
             <a href="#subscribe" className="text-xs hover:underline">Subscribe</a>
-          </div>
+          </div>}
 
           {/* Hamburger Icon */}
           <div className="hidden max-sm:flex justify-end z-50">
@@ -39,7 +47,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Collapsible Menu */}
+   
         <nav
           className={`max-sm:${
             menuOpen ? 'block' : 'hidden'

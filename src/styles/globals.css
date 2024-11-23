@@ -190,7 +190,6 @@ body {
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 190px;
 }
 
 @keyframes textclip {
@@ -202,7 +201,10 @@ body {
 
 
 
-
+#fd-form-656c1593717e716ed03eba7c {
+  margin: 20px auto;
+  max-width: 600px;
+}
 
 
 

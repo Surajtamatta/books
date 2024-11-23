@@ -15,12 +15,12 @@ const SecondCarousel = ({ data }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   // Autoplay effect to cycle slides every 8 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [data.length]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % data.length);
+  //   }, 8000);
+  //   return () => clearInterval(interval);
+  // }, [data.length]);
 
   // Get background color based on title
   const getBackgroundColor = (title) => {
@@ -31,11 +31,12 @@ const SecondCarousel = ({ data }) => {
   const lightColor = lightenColor(backgroundColor, 0.5);
 
   const handleNext = () => setCurrentSlideIndex((currentSlideIndex + 1) % data.length);
+
 console.log(lightColor)
   return (
     <section 
      id='#books'
-      className="relative w-full h-screen flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
+      className="relative w-full sm:h-screen flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
       style={{ 
         backgroundColor: backgroundColor,
         transition: 'background-color 0.3s ease-in-out', 

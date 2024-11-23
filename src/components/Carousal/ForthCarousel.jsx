@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const CssCarousel = ({ data }) => {
+const ForthCarousel = ({ data }) => {
   return (
     <div className="relative  w-full overflow-hidden">
       {/* Scrolling Container */}
@@ -12,7 +12,7 @@ const CssCarousel = ({ data }) => {
             key={index}
             className="w-full aspect-square relative flex justify-center"
           >
-            <Image src={book.imgSrc} alt={book.title} width={226} height={340} />
+            <Image src={book.imgSrc} alt={book.alt} width={226} height={340} />
           </div>
         ))}
         {data.map((book, index) => (
@@ -20,7 +20,7 @@ const CssCarousel = ({ data }) => {
             key={`${index}-duplicate`}
             className="w-full aspect-square relative flex justify-center"
           >
-            <Image src={book.imgSrc} alt={book.title} width={226} height={340} />
+            <Image src={book.imgSrc} alt={book.alt} width={226} height={340} />
           </div>
         ))}
       </div>
@@ -50,4 +50,4 @@ const CssCarousel = ({ data }) => {
   );
 };
 
-export default CssCarousel;
+export default ForthCarousel;
