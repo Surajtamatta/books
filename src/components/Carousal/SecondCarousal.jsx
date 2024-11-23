@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Image from 'next/image';
 
@@ -8,19 +8,12 @@ const lightenColor = (color, percent) => {
   const r = (num >> 16) + Math.round((255 - (num >> 16)) * percent);
   const g = ((num >> 8) & 0x00ff) + Math.round((255 - ((num >> 8) & 0x00ff)) * percent);
   const b = (num & 0x0000ff) + Math.round((255 - (num & 0x0000ff)) * percent);
-  return `#${(r < 255 ? r : 255).toString(16).padStart(2,"0")}${(g < 255 ? g : 255).toString(16).padStart(2, "0")}${(b < 255 ? b : 255).toString(16).padStart(2, "0")}`;
+  return `#${(r < 255 ? r : 255).toString(16).padStart(2, "0")}${(g < 255 ? g : 255).toString(16).padStart(2, "0")}${(b < 255 ? b : 255).toString(16).padStart(2, "0")}`;
 };
 
 const SecondCarousel = ({ data }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
-  // Autoplay effect to cycle slides every 8 seconds
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % data.length);
-  //   }, 8000);
-  //   return () => clearInterval(interval);
-  // }, [data.length]);
+  const [isChanging, setIsChanging] = useState(false); // To prevent quick successive clicks during the delay
 
   // Get background color based on title
   const getBackgroundColor = (title) => {
@@ -30,17 +23,23 @@ const SecondCarousel = ({ data }) => {
   const backgroundColor = getBackgroundColor(data[currentSlideIndex]?.title || "");
   const lightColor = lightenColor(backgroundColor, 0.5);
 
-  const handleNext = () => setCurrentSlideIndex((currentSlideIndex + 1) % data.length);
+  const handleNext = () => {
+    if (isChanging) return; 
+    setIsChanging(true); 
+    setTimeout(() => {
+      setCurrentSlideIndex((currentSlideIndex + 1) % data.length); 
+      setIsChanging(false);
+    }, 1000); 
+  };
 
-console.log(lightColor)
   return (
-    <section 
-     id='#books'
+    <section
+      id="#books"
       className="relative w-full sm:h-screen flex items-center justify-center mx-auto py-8 sm:py-12 px-6"
-      style={{ 
+      style={{
         backgroundColor: backgroundColor,
-        transition: 'background-color 0.3s ease-in-out', 
-        minHeight: 600 
+        transition: 'background-color 0.3s ease-in-out',
+        minHeight: 600,
       }}
     >
       <div className="carousel w-full flex justify-center items-center relative">
@@ -85,12 +84,11 @@ console.log(lightColor)
                     {book.character}
                   </h1>
                   <div className="w-[70%] md:w-[70%] aspect-[1/1.3] flex justify-end left-6 items-center relative">
-                    <Image src={book.bookcover} alt={book.title} layout="fill" objectFit="cover"  />
+                    <Image src={book.bookcover} alt={book.title} layout="fill" objectFit="cover" />
                     <div className="w-2/3 absolute bottom-2 left-[-5rem] sm:left-[-4rem] md:left-[-8rem] aspect-[1/1.2] flex justify-end items-center">
                       <Image src={book.imgSrc} alt={book.title} layout="fill" objectFit="contain" className="rounded-lg p-1" />
                       <Image src={'/tablet.png'} alt={'tablet'} layout="fill" objectFit="contain" className="rounded-lg" />
                     </div>
-
                   </div>
                   <button onClick={handleNext} className="carousel-control absolute right-[-1rem] p-1">
                     <HiOutlineArrowNarrowRight className="text-white font-bold text-xl sm:text-3xl" />
@@ -100,8 +98,6 @@ console.log(lightColor)
             )}
           </div>
         ))}
-
-        
       </div>
     </section>
   );
