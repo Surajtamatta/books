@@ -1,14 +1,7 @@
-
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-
-
-
-
 const ForthCarousel = ({ data }) => {
-
-
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
 
@@ -34,11 +27,10 @@ const ForthCarousel = ({ data }) => {
     return <p>Error: {error}</p>;
   }
 
-
   return (
     <div className="relative mb-4 w-full overflow-hidden">
       {/* Scrolling Container */}
-      <div className="flex gap-6 animate-scroll items-center w-max" id="carousel">
+      <div className="flex gap-6  items-center w-max" id="carousel">
         {posts.map((items, index) => (
           <div
             key={index}
@@ -57,14 +49,16 @@ const ForthCarousel = ({ data }) => {
         ))}
       </div>
 
-
+      {/* Style for Animation */}
       <style jsx>{`
         #carousel {
           animation: scroll 30s linear infinite;
+          transition: animation-play-state 1s ease; 
         }
 
         #carousel:hover {
           animation-play-state: paused;
+       
         }
 
         @keyframes scroll {
@@ -76,8 +70,6 @@ const ForthCarousel = ({ data }) => {
           }
         }
       `}</style>
-
-
     </div>
   );
 };

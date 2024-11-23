@@ -1,28 +1,33 @@
 
-"use client";
+
 
 import { useEffect } from "react";
 
-const FlodeskForm = () => {
+const Form = () => {
   useEffect(() => {
-    // Check if the Flodesk library is already initialized
+    // Check if the Flodesk library is available
     if (!window.fd) {
-      console.warn("Flodesk library not loaded yet. Make sure the script is included.");
+      console.warn("Flodesk library not loaded yet. Ensure the script is included.");
       return;
     }
 
-    // Initialize the Flodesk form in the specified container
+    // Initialize Flodesk form
     window.fd("form", {
       formId: "656c1593717e716ed03eba7c",
-      containerEl: "#fd-container", // Use the existing div
+      containerEl: "#fd-form-656c1593717e716ed03eba7c",
     });
   }, []);
 
+
+
+
   return (
     <div className="w-full">
-      <div id="fd-container "></div>
+      {/* Container for the Flodesk form */}
+      <div id="fd-form-656c1593717e716ed03eba7c"></div>
     </div>
   );
 };
 
-export default FlodeskForm;
+export default Form;
+

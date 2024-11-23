@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'scontent.cdninstagram.com', // Replace with your external image host
+        port: '', // Leave empty if no specific port
+      },
+    ],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -9,9 +18,6 @@ const nextConfig = {
     });
 
     return config;
-  },
-  images: {
-    domains: ['scontent.cdninstagram.com'], // Allow Instagram's CDN
   },
 };
 
