@@ -7,7 +7,7 @@ import { FaInstagram, FaTiktok, FaGoodreadsG } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="h-[10vh] bg-[#1f1e2c] flex justify-center  text-white py-4">
+    <footer className="min-h-[10vh] bg-[#1f1e2c] flex justify-center  text-white py-4">
       <div className="flex flex-col items-center  justify-center space-y-2 sm:space-y-4 ">
         {/* Social Media Icons */}
         <div className="flex space-x-6 text-2xl sm:text-3xl">

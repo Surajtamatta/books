@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 const Subscribe = () => {
 
   return (
-    <section id='contact' className="w-full sm:h-[90vh]   bg-[#1f1e2c] p-6">
+    <section id='contact' className="w-full sm:min-h-[90vh]   bg-[#1f1e2c] p-6">
       {/* Newsletter Subscription Section */}
     <div className="flex flex-col justify-between items-center">
     <h2 className="mb-8 py-6 sm:py-20 text-4xl sm:text-7xl font-thin italic font-metal  text-gray-200">Get <span className="not-italic font-stix ">In Touch.</span></h2>

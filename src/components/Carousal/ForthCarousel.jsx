@@ -1,26 +1,58 @@
 
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Image from 'next/image';
 
+
+
+
+
 const ForthCarousel = ({ data }) => {
+
+
+  const [posts, setPosts] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const response = await fetch('/api/instagram');
+        if (!response.ok) {
+          throw new Error('Failed to fetch Instagram posts');
+        }
+
+        const data = await response.json();
+        setPosts(data);
+      } catch (err) {
+        setError(err.message);
+      }
+    }
+
+    fetchPosts();
+  }, []);
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+
   return (
-    <div className="relative  w-full overflow-hidden">
+    <div className="relative mb-4 w-full overflow-hidden">
       {/* Scrolling Container */}
       <div className="flex gap-6 animate-scroll items-center w-max" id="carousel">
-        {data.map((book, index) => (
+        {posts.map((items, index) => (
           <div
             key={index}
             className="w-full aspect-square relative flex justify-center"
           >
-            <Image src={book.imgSrc} alt={book.alt} width={226} height={340} />
+            <Image src={items.url} alt={`post ${index}`} width={226} height={340} />
           </div>
         ))}
-        {data.map((book, index) => (
+        {posts.map((items, index) => (
           <div
             key={`${index}-duplicate`}
             className="w-full aspect-square relative flex justify-center"
           >
-            <Image src={book.imgSrc} alt={book.alt} width={226} height={340} />
+            <Image src={items.url} alt={`post ${index}`} width={226} height={340} />
           </div>
         ))}
       </div>

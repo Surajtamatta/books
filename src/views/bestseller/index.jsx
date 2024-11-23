@@ -16,16 +16,16 @@ const BestSeller = () => {
       
           <ThirdCarousal  data={dummySlides} />
     
-            <section id="subscribe" className="relative flex sm:h-screen 2xl:max-h-[1200px] flex-col justify-evenly  sm:justify-evenly  items-center px-6 py-8 ">
+            <section id="subscribe" className="relative flex sm:min-h-screen  max-h-[950px]  flex-col justify-evenly  sm:justify-evenly  items-center px-6 py-8 ">
               {/* <!-- Heading Section --> */}
               <div className='flex flex-col gap-6 sm:mb-10  sm:top-6'>
-              <div className="text-center mb-8 ">
+              {/* <div className="text-center mb-8 ">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-stix font-normal text-[#d178b0]">Join my newsletter.</h1>
                 <p className="text-gray-800 text-lg mt-2">STAY UP TO DATE WITH BONUS CONTENT, FREEBIES AND MORE!</p>
-              </div>
+              </div> */}
 
               {/* <!-- Newsletter Form Section --> */}
-              <div className="w-full max-w-lg mx-auto ">
+              <div className="w-full mt-10 max-w-lg mx-auto flex flex-col justify-center items-center ">
                 <Form/>
                 <p className="text-center text-xs text-gray-600 mt-4">
                   By signing up, you agree to our <a href="#" className="underline">Terms of Service</a> and <a href="#" className="underline">Privacy Policy</a>. You can unsubscribe at any time.

@@ -6,8 +6,6 @@ import BestSeller from "../views/bestseller";
 import Subscribe from "../views/contact";
 import About from "@/views/about";
 
-
-
 export default function Home() {
   return (
   <Layout>

@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -11,6 +10,9 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ['scontent.cdninstagram.com'], // Allow Instagram's CDN
+  },
 };
 
-export default  nextConfig;
+export default nextConfig;
