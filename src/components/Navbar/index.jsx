@@ -95,7 +95,7 @@ const Navbar = () => {
             </Link>
 
             <Link href={'/#subscribe'} className='sm:hidden'> 
-            <h1 className=" max-sm:w-full max-sm:px-6 flex max-sm:py-4 font-normal hover:text-gray-500 hover:underline transition-colors duration-300">Subscribe !</h1>
+            <h1 className=" max-sm:w-full text-[#d394e2] max-sm:px-6 flex max-sm:py-4 font-normal hover:text-gray-500 hover:underline transition-colors duration-300">Subscribe !</h1>
             </Link>
 
           </div>
