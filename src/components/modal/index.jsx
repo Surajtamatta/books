@@ -29,7 +29,7 @@ const Modal = () => {
   }
 
   return (
-    <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50  backdrop-blur-sm">
+    <div className="fixed inset-0 p-10 sm:p-5 z-50 flex items-center justify-center bg-black bg-opacity-50  backdrop-blur-sm">
       <div className="relative min-w-28 rounded shadow-lg">
         {/* Close Button */}
        { isContentLoaded &&
@@ -42,7 +42,9 @@ const Modal = () => {
        }
 
         {/* Dynamic Content */}
-        <div>{content}</div>
+        <div  >
+          {content}
+          </div>
       </div>
     </div>
   );

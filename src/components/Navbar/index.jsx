@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PopUp from '../PopUp';
 import { useModal } from '../../context/modalContext';
-import Modal from '../modal';
+
 
 
 
@@ -49,11 +49,7 @@ const Navbar = () => {
          
           
           <div className="w-1/2 flex justify-end max-sm:hidden font-poppins  gap-5 font-medium">
-            {/* <button 
-            onClick={handleOpenModal} 
-            className="z-10 bg-[#d394e2] text-white p-2 sm:px-4 sm:py-2 rounded-md shadow-sm hover:bg-[#f2b1ff]">
-            Subscribe!
-            </button> */}
+       
             <button 
             onClick={handleOpenModal} 
             className="z-10 text-[#d394e2] text-sm p-2 sm:px-4 sm:py-2  shadow-none hover:text-[#f2b1ff]">
