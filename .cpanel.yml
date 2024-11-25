@@ -1,0 +1,28 @@
+---
+deployment:
+  tasks:
+    # Set the deployment path on the server
+    - export DEPLOYPATH=/home/example/public_html/
+
+    # Build the Next.js application (assuming Node.js and npm/yarn are installed on the server)
+    - npm install
+    - npm run build
+
+    # Copy the public assets to the deployment path
+    - /bin/cp -r public/* $DEPLOYPATH
+
+    # Copy the Next.js output to the deployment path
+    - /bin/cp -r .next/* $DEPLOYPATH
+
+    # Copy additional static files like the HTML and CSS files
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+
+    # Copy server-side scripts if any (adjust paths as necessary)
+    - /bin/cp -r src/pages/api $DEPLOYPATH/api
+
+    # Ensure node_modules is excluded for better performance
+    - echo "Skipping node_modules in deployment"
+
+    # Final permissions adjustment if necessary
+    - chmod -R 755 $DEPLOYPATH
