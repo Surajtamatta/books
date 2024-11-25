@@ -1,6 +1,7 @@
 import { Poppins,STIX_Two_Text,Montserrat,Puppies_Play,DM_Serif_Text ,Sriracha, Metal } from 'next/font/google'
 import "../styles/globals.css";
 import localFont from 'next/font/local'
+import { ModalProvider } from '../context/modalContext';
 
 const poppins = Poppins({
   weight: ['400', '700'],
@@ -88,7 +89,10 @@ export default function App({ Component, pageProps }) {
         --font-montserrat:${montserrat.style.fontFamily};
       }`}
     </style>
+    <ModalProvider>
     <Component {...pageProps} />
+    </ModalProvider>
+   
   </>
   )
 }

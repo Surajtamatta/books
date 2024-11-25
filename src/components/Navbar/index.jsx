@@ -3,12 +3,32 @@ import { FaBars } from "react-icons/fa6";
 import { GiCrossMark } from "react-icons/gi";
 import Image from 'next/image';
 import Link from 'next/link';
-const Navbar = ({variants}) => {
+import PopUp from '../PopUp';
+import { useModal } from '../../context/modalContext';
+import Modal from '../modal';
+import Form from '../Form';
+
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { openModal } = useModal();
+
+  const handleOpenModal = () => {
+    openModal(
+      <Form/>
+    );
+  };
+
+  const [popup, setPopup] = useState(true);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const togglePopup = () => {
+    <script 
+    />
+     
+  }
 
   return (
     <div className="w-full h-full max-h-28">
@@ -33,15 +53,11 @@ const Navbar = ({variants}) => {
          
           
           <div className="w-1/2 flex justify-end max-sm:hidden font-poppins  gap-5 font-medium">
-           {/* {variants === "other" ?  */}
-          <Link href={'/#subscribe'} className="bg-[#d394e2] text-white p-2 sm:px-4 sm:py-2 rounded-md shadow-sm hover:bg-[#f2b1ff]">
-           Subscribe!
-            </Link>
-            {/* :
-            <Link href={'/#subscribe'}>
-            <h1 className="text-xs hover:underline text-[#d394e2]">Subscribe</h1>
-            </Link>
-            } */}
+            <button 
+            onClick={handleOpenModal} 
+            className="z-10 bg-[#d394e2] text-white p-2 sm:px-4 sm:py-2 rounded-md shadow-sm hover:bg-[#f2b1ff]">
+            Subscribe!
+            </button>
           </div>
 
           {/* Hamburger Icon */}
@@ -56,7 +72,7 @@ const Navbar = ({variants}) => {
         <nav
           className={`max-sm:${
             menuOpen ? 'block' : 'hidden'
-          } max-sm:fixed w-full inset-0 bg-white bg-opacity-70 backdrop-blur-md z-40  flex max-sm:justify-start
+          } max-sm:fixed w-full inset-0 bg-white bg-opacity-70 backdrop-blur-md z-20  flex max-sm:justify-start
           transition-transform duration-500 ease-in-out transform 
          justify-center
           max-sm:${
@@ -87,6 +103,8 @@ const Navbar = ({variants}) => {
           </div>
         </nav>
       </header>
+      {popup && <PopUp onClose={togglePopup} />}
+      <Modal />
     </div>
   );
 };

@@ -14,25 +14,17 @@ const lightenColor = (color, percent) => {
 
 const SecondCarousel = ({ data }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  const [isChanging, setIsChanging] = useState(false); // To prevent quick successive clicks during the delay
 
   // Get background color based on title
   const getBackgroundColor = (title) => {
     return title.toLowerCase().includes("collide") ? "#6e9277" : "#c87faa";
   };
-
   const backgroundColor = getBackgroundColor(data[currentSlideIndex]?.title || "");
   const lightColor = lightenColor(backgroundColor, 0.5);
 
   const handleNext = () => {
-    if (isChanging) return; 
-    setIsChanging(true); 
-    setTimeout(() => {
-      setCurrentSlideIndex((currentSlideIndex + 1) % data.length); 
-      setIsChanging(false);
-    }, 1000); 
+      setCurrentSlideIndex((currentSlideIndex + 1) % data.length);  
   };
-
   return (
     <section
       id="#books"

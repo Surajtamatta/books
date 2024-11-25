@@ -24,7 +24,7 @@ const Form = () => {
   return (
     <div className="w-full">
       {/* Container for the Flodesk form */}
-      <div id="fd-form-656c1593717e716ed03eba7c"></div>
+      <div id="fd-form-656c1593717e716ed03eba7c" className="p-0"></div>
     </div>
   );
 };

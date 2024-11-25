@@ -201,9 +201,8 @@ body {
 
 
 
-#fd-form-656c1593717e716ed03eba7c {
-  margin: 20px auto;
-  max-width: 600px;
+[data-ff-el="root"].ff-656c1593717e716ed03eba7c .ff-656c1593717e716ed03eba7c__form {
+ padding: 0;
 }
 
 
@@ -212,3 +211,10 @@ body {
 
 
 
+.close-modal{
+  svg{
+    fill: #000000;
+    stroke-width: 30px;
+    stroke: #ffffff;
+  }
+}
