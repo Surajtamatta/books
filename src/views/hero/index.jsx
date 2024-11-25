@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import { booksdata } from '@/json/bookdata';
 import BookCarousel from '../../components/Carousal/FirstCarousel';
 import { Amazon, Target, Barnenobles, Booksmellion, Walmart } from '../../svg/logo';

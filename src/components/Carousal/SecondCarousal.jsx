@@ -3,7 +3,6 @@ import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Utility function to lighten a color by a given percentage
 const lightenColor = (color, percent) => {
   const num = parseInt(color.replace("#", ""), 16);
   const r = (num >> 16) + Math.round((255 - (num >> 16)) * percent);

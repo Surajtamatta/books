@@ -1,7 +1,9 @@
+import React,{useState,useEffect} from 'react';
 import { Poppins,STIX_Two_Text,Montserrat,Puppies_Play,DM_Serif_Text ,Sriracha, Metal } from 'next/font/google'
 import "../styles/globals.css";
 import localFont from 'next/font/local'
 import { ModalProvider } from '../context/modalContext';
+import Router from 'next/router';
 
 const poppins = Poppins({
   weight: ['400', '700'],
@@ -72,6 +74,49 @@ const winslowtitle = localFont({
   variable: '--font-winslowtitle'
 })
 export default function App({ Component, pageProps }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleStart = () => setLoading(true);
+    const handleComplete = () => setLoading(false);
+
+    Router.events.on("routeChangeStart", handleStart);
+    Router.events.on("routeChangeComplete", handleComplete);
+    Router.events.on("routeChangeError", handleComplete);
+
+    const loadAssets = async () => {
+      await document.fonts.ready;
+      await Promise.all(
+        Array.from(document.images).map((img) => {
+          return new Promise((resolve) => {
+            if (img.complete) {
+              resolve();
+            } else {
+              img.onload = resolve;
+              img.onerror = resolve;
+            }
+          });
+        })
+      );
+      setLoading(false);
+    };
+
+    loadAssets();
+
+    return () => {
+      Router.events.off("routeChangeStart", handleStart);
+      Router.events.off("routeChangeComplete", handleComplete);
+      Router.events.off("routeChangeError", handleComplete);
+    };
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center">
+        <div className="h-20 w-20 animate-spin rounded-full border-8 border-t-[#d394e2] border-gray-300"></div>
+      </div>
+    );
+  }
   return (
     <>
     <style jsx global>{`

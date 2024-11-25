@@ -1,23 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useModal } from "../../context/modalContext";
 import { FaTimes } from "react-icons/fa";
+
 const Modal = () => {
   const { isOpen, closeModal, content } = useModal();
+  const [isContentLoaded, setIsContentLoaded] = useState(false);
+ 
+
+  useEffect(() => {
+    if (isOpen && content) {
+      const loadContent = setTimeout(() => {
+        setIsContentLoaded(true); 
+      }, 500);  
+
+      return () => clearTimeout(loadContent);
+    } else {
+      setIsContentLoaded(false);
+    }
+  }, [isOpen, content]);
 
   if (!isOpen) return null;
-
+  if (!isContentLoaded) {
+    return (
+      <div class="h-dvh w-full flex items-center justify-center">
+        <div class="border-purple-200-200 h-20 w-20 animate-spin rounded-full border-8 border-t-[#d394e2]" />
+      </div>
+    );
+  }
 
   return (
-    <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative">
+    <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50  backdrop-blur-sm">
+      <div className="relative min-w-28 rounded shadow-lg">
         {/* Close Button */}
-        <button
-          onClick={closeModal}
-          className="close-modal absolute z-50 top-4 right-4 text-1xl text-gray-500 hover:text-black"
-        >
-            <FaTimes/>
-          
-        </button>
+       { isContentLoaded &&
+         <button
+         onClick={closeModal}
+         className=" close-modal absolute z-50 top-4 right-4 text-1xl text-gray-500 hover:text-black"
+       >
+         <FaTimes />
+       </button>
+       }
 
         {/* Dynamic Content */}
         <div>{content}</div>

@@ -1,6 +1,5 @@
-import SecondCarousel from '../../components/Carousal/SecondCarousal';
+
 import Image from 'next/image';
-import { booksdata } from '@/json/bookdata';
 const About = () => {
   return (
     <section id='about' className="flex flex-col justify-center items-center  ">

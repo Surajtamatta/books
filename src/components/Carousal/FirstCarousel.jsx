@@ -3,27 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 const FirstCarousel = ({ data }) => {
-  // const [currentSlide, setCurrentSlide] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prevSlide) => (prevSlide + 2) % data.length);
-  //   }, 5000); 
-  //   return () => clearInterval(interval);
-  // }, [data.length]);
 
   return (
     <div className="carousel-container p-2  sm:p-6 w-full max-w-[80%] sm:max-w-[80%] md:max-w-[900px] left-4 sm:left-7 relative mx-auto overflow-hidden">
       {data.map((book, index) => (
         <div
           key={index}
-          className={`carousel-slide active w-1/2
-            ${""
-              // index === currentSlide || index === (currentSlide + 1) % data.length
-              // ? 'active'
-              // : ''
-            }
-          `}
+          className={`carousel-slide active w-1/2 `}
         >
           <div className=" flex flex-col text-left items-start max-w-[230px] sm:max-w-[320px] md:max-w-[400px] mx-auto">
             <h1 className="mb-2 text-black text-xm  font-inters font-medium text-[8px] sm:text-sm">
@@ -36,7 +22,7 @@ const FirstCarousel = ({ data }) => {
                 layout="fill"
                 objectFit="fit"
               />
-              {/* <BookCover   src={book.imgSrc}/> */}
+
             </div>
             <h3 className="text-base sm:text-xl mt-4  sm:mt-5 text-white font-semibold font-markazitext mb-2">
               {book.title}

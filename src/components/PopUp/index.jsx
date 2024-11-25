@@ -3,7 +3,7 @@
 
 import { useEffect } from "react";
 
-const PopUp = ({ onClose }) => {
+const PopUp = () => {
 
   useEffect(() => {
         if (!window.fd) {
@@ -11,18 +11,17 @@ const PopUp = ({ onClose }) => {
           return;
         }
   
-        window.fd("popup", {
-          formId: "67420de52329b983f3710813",
-          containerEl: "#fd-form-67420de52329b983f3710813",
+        window.fd("form", {
+          formId: "67440591b07487ef6f47fd1e",
+          containerEl: "#fd-form-67440591b07487ef6f47fd1e",
         });
    
   }, []);
 
 
-
   return (
-    <div className="w-full">
-      <div id="fd-form-67420de52329b983f3710813" className="z-50"></div>
+    <div className="w-full relative">
+      <div id="fd-form-67440591b07487ef6f47fd1e" className="z-50"></div>
     </div>
   );
 };

@@ -88,20 +88,12 @@ body {
 @keyframes fadeInOut {
   0% {
     opacity: 0;
-    transform: scale(0.8); /* Scale down to 100% of original size */
+    transform: scale(0.8); 
   }
-  /* 25% {
-    opacity: 1; 
-    transform: scale(1.1); 
-  } */
   50% {
-    opacity: 1; /* Fully visible */
+    opacity: 1; 
     transform: scale(1);
   }
-  /* 75% {
-    opacity: 1; 
-    transform: scale(1.1); 
-  } */
   100% {
     opacity: 1; 
     transform: scale(1); 
@@ -148,11 +140,11 @@ body {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: scale(1); /* Start slightly scaled down */
+    transform: scale(1); 
   }
   100% {
     opacity: 1;
-    transform: scale(1); /* Scale to full size */
+    transform: scale(1); 
   }
 }
 
@@ -162,9 +154,9 @@ body {
 }
 
 .carousel-slide1.active {
-  display: flex; /* Show the active slide */
+  display: flex;
   opacity: 1;
-  animation: fadeIn 0.5s ease-in-out forwards; /* Apply fade-in animation for 3 seconds */
+  animation: fadeIn 0.5s ease-in-out forwards; 
 }
 
 

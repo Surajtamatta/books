@@ -7,14 +7,13 @@ export default function Document() {
       </Head>
       <body className="antialiased">
         <Main />
-        <NextScript />
-
-        {/* Add Flodesk Universal Script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          
-               (function(w, d, t, h, s, n) {
+        <NextScript />      
+      </body>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w, d, t, h, s, n) {
+              if (!w[n]) {
                 w.FlodeskObject = n;
                 var fn = function() {
                   (w[n].q = w[n].q || []).push(arguments);
@@ -32,26 +31,11 @@ export default function Document() {
                 sn.noModule = true;
                 sn.src = h + s + '.js' + v;
                 f.parentNode.insertBefore(sn, f);
-              })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
-           
-            `,
-          }}
-        />
-     
-  
-          <script
-          dangerouslySetInnerHTML={{
-                      __html: `
-                      window.fd('form', {
-                        formId: '674205247d57f06154ceb8ad'
-                      });
-                        `,
-                    }}
-          />
-  
-
-        
-      </body>
+              }
+            })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+          `
+        }}
+      />
     </Html>
   );
 }

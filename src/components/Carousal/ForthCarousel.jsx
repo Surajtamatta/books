@@ -1,50 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import { instagramPhotos } from '@/json/instaphotos';
 
-const ForthCarousel = ({ data }) => {
-  const [posts, setPosts] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    async function fetchPosts() {
-      try {
-        const response = await fetch('/api/instagram');
-        if (!response.ok) {
-          throw new Error('Failed to fetch Instagram posts');
-        }
-
-        const data = await response.json();
-        setPosts(data);
-      } catch (err) {
-        setError(err.message);
-      }
-    }
-
-    fetchPosts();
-  }, []);
-
-  if (error) {
-    return <p>Error: {error}</p>;
-  }
-
+const ForthCarousel = () => {
   return (
     <div className="relative mb-4 w-full overflow-hidden">
       {/* Scrolling Container */}
-      <div className="flex gap-6  items-center w-max" id="carousel">
-        {posts.map((items, index) => (
+      <div className="flex gap-6 items-center w-max" id="carousel">
+        {instagramPhotos.map((item, index) => (
           <div
             key={index}
-            className="w-full aspect-square relative flex justify-center"
+            className="w-[226px] aspect-square relative flex justify-center"
           >
-            <Image src={items.url} alt={`post ${index}`} width={226} height={340} />
+            <Image src={item.url} alt={`post ${index}`} width={226} height={340} />
           </div>
         ))}
-        {posts.map((items, index) => (
+        {instagramPhotos.map((item, index) => (
           <div
             key={`${index}-duplicate`}
-            className="w-full aspect-square relative flex justify-center"
+            className="w-[226px] aspect-square relative flex justify-center"
           >
-            <Image src={items.url} alt={`post ${index}`} width={226} height={340} />
+            <Image src={item.url} alt={`post ${index}`} width={226} height={340} />
           </div>
         ))}
       </div>
@@ -52,13 +28,13 @@ const ForthCarousel = ({ data }) => {
       {/* Style for Animation */}
       <style jsx>{`
         #carousel {
-          animation: scroll 30s linear infinite;
-          transition: animation-play-state 1s ease; 
+          display: flex;
+          animation: scroll 50s linear infinite;
+          transition: animation-play-state 1s ease-in-out; 
         }
 
         #carousel:hover {
           animation-play-state: paused;
-       
         }
 
         @keyframes scroll {
