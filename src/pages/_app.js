@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import localFont from 'next/font/local'
 import { ModalProvider } from '../context/modalContext';
 import Router from 'next/router';
-
+import Modal from "@/components/modal";
 const poppins = Poppins({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
@@ -135,7 +135,8 @@ export default function App({ Component, pageProps }) {
       }`}
     </style>
     <ModalProvider>
-    <Component {...pageProps} />
+     <Component {...pageProps} />
+     <Modal />
     </ModalProvider>
    
   </>
