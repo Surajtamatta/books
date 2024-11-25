@@ -16,7 +16,7 @@ const BestSeller = () => {
       
           <ThirdCarousal  data={dummySlides} />
     
-            <section id="subscribe" className="relative flex sm:min-h-screen    flex-col justify-evenly  sm:justify-evenly  items-center px-6 py-8 ">
+            <section id="subscribe" className="relative flex sm:min-h-screen  py-6   flex-col justify-evenly  sm:justify-evenly  items-center ">
               {/* <!-- Heading Section --> */}
               <div className='flex flex-col gap-6 sm:mb-10  sm:top-6'>
               {/* <div className="text-center mb-8 ">
@@ -25,11 +25,14 @@ const BestSeller = () => {
               </div> */}
 
               {/* <!-- Newsletter Form Section --> */}
-              <div className="w-full mt-10 max-w-lg mx-auto flex flex-col justify-center items-center ">
+              <div className="w-full max-w-[600px] mt-8  mx-auto flex flex-col justify-center items-center ">
                 <Form/>
-                <p className="text-center text-xs text-gray-600 mt-4">
+                <div className='w-full max-w-lg px-6'>
+                <p className="w-full  text-center text-xs text-gray-600 md:mt-[-55px]">
                   By signing up, you agree to our <a href="#" className="underline">Terms of Service</a> and <a href="#" className="underline">Privacy Policy</a>. You can unsubscribe at any time.
                 </p>
+                </div>
+               
               </div>
 
 
@@ -44,7 +47,7 @@ const BestSeller = () => {
 
 
             
-            <div className='w-full relative mt-14  sm:top-6'>
+            <div className='w-full relative mt-14  sm:top-6 px-6'>
               <div className="w-full group  relative sm:top-[-1rem] gap-1 flex items-center justify-start  py-2">
                 <p className=" font-thin text-base mr-2 font-winslowtitle ">Follow me! </p>
                 <div className='bg-[#d178b0]  group-hover:bg-[#ff92d7] p-1 rounded-full'>

@@ -9,7 +9,7 @@ const Modal = () => {
 
   return (
     <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative  w-full max-w-md">
+      <div className="relative">
         {/* Close Button */}
         <button
           onClick={closeModal}
