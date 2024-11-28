@@ -210,3 +210,9 @@ body {
     stroke: #ffffff;
   }
 }
+
+
+.swiper-wrapper{
+  display: flex;
+  place-items: center;
+}

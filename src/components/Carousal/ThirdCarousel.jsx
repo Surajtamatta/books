@@ -16,7 +16,7 @@ const ThirdCarousal = ({ data }) => {
   };
 
   return (
-    <div className="bg-[#1F1E2C] h-full gap-2 sm:gap-4 max-h-[375px] md:p-6 p-8 sm:py-14 text-white text-center flex flex-col justify-between items-center">
+    <div className="bg-[#1F1E2C] h-full gap-2 sm:gap-4  md:p-6 p-8 sm:py-14 text-white text-center flex flex-col justify-between items-center">
       <div className="flex w-full justify-between items-center gap-2 sm:gap-4">
         {/* Custom Previous Button */}
         <button
@@ -49,7 +49,7 @@ const ThirdCarousal = ({ data }) => {
           >
             {data?.map((item, index) => (
               <SwiperSlide key={index} className="flex-shrink-0 flex justify-center w-full relative">
-                <p className="text-base max-sm:text-base sm:text-xl md:text-[28px] max-w-2xl mx-auto sm:mt-12 font-amerigo italic font-semibold tracking-wide">
+                <p className="text-base max-sm:text-base sm:text-xl md:text-[28px] max-w-2xl mx-auto sm:mt-6 font-amerigo italic font-semibold tracking-wide">
                   {item.text}
                 </p>
                 <p className="text-sm sm:text-base md:text-lg uppercase mt-4 font-dmserif font-semibold">
