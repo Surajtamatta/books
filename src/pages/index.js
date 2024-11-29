@@ -8,6 +8,7 @@ import Subscribe from "../views/contact";
 import About from "@/views/about";
 import PopUp from "@/components/PopUp";
 import Modal from "@/components/modal";
+import EmailConfirmation from "@/template/email";
 
 export default function Home() {
   const { openModal } = useModal();
