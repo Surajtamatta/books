@@ -5,7 +5,11 @@ import nodemailer from "nodemailer";
 const emailuser = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
 
+// console.log("EMAIL_USER:", emailuser);
+// console.log("EMAIL_PASS:", pass);
+
 export default async function handler(req, res) {
+
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method Not Allowed" });
   }
