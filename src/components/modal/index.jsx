@@ -29,8 +29,8 @@ const Modal = () => {
   }
 
   return (
-    <div className="fixed inset-0 p-10 sm:p-5 z-50 flex items-center justify-center bg-black bg-opacity-50  backdrop-blur-sm">
-      <div className="relative min-w-28 rounded shadow-lg">
+    <div className="fixed inset-0 p-5 z-50 flex items-center justify-center bg-black bg-opacity-50  backdrop-blur-sm overflow-auto">
+      <div className="relative min-w-28 rounded shadow-lg ">
         {/* Close Button */}
        { isContentLoaded &&
          <button
