@@ -5,6 +5,7 @@ import localFont from 'next/font/local'
 import { ModalProvider } from '../context/modalContext';
 import Router from 'next/router';
 import Modal from "@/components/modal";
+import ScrollToHash from '@/components/SrollToHash';
 const poppins = Poppins({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
@@ -134,6 +135,7 @@ export default function App({ Component, pageProps }) {
         --font-montserrat:${montserrat.style.fontFamily};
       }`}
     </style>
+    <ScrollToHash />
     <ModalProvider>
      <Component {...pageProps} />
      <Modal />

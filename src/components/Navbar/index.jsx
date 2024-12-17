@@ -19,7 +19,7 @@ const Navbar = () => {
     );
   };
 
-  const [popup, setPopup] = useState(true);
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

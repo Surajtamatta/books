@@ -35,7 +35,7 @@ const Modal = () => {
        { isContentLoaded &&
          <button
          onClick={closeModal}
-         className=" close-modal absolute z-50 top-4 right-4 text-1xl text-gray-500 hover:text-black"
+         className=" close-modal absolute z-50 top-6 right-6 text-1xl text-gray-500 hover:text-black"
        >
          <FaTimes />
        </button>

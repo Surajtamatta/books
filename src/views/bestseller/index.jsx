@@ -1,21 +1,24 @@
 import React from 'react';
 import FourCarousel from '../../components/Carousal/ForthCarousel';
-import ThirdCarousal from '../../components/Carousal/ThirdCarousel';
+
 import Image from 'next/image';
 import {instagramPhotos} from '../../json/instaphotos'
 import { GrInstagram } from "react-icons/gr";
-import { dummySlides } from '@/json/thoughtsdata';
+
 import Form from '@/components/Form';
+import { useModal } from '@/context/modalContext';
+import TermsConditions from '@/components/TermsCondition';
 const BestSeller = () => {
  
+  const { openModal } = useModal();
 
-
+  const handleOpenModal = () => {
+    openModal(
+      <TermsConditions/>
+    );
+  };
 
   return (
-    <section>
-      
-          <ThirdCarousal  data={dummySlides} />
-    
             <section id="subscribe" className="relative flex sm:min-h-screen  py-6   flex-col justify-evenly  sm:justify-evenly  items-center ">
               {/* <!-- Heading Section --> */}
               <div className='flex flex-col gap-6 sm:mb-10  sm:top-6'>
@@ -24,9 +27,10 @@ const BestSeller = () => {
               {/* <!-- Newsletter Form Section --> */}
               <div className="w-full max-w-[600px] mt-8  mx-auto flex flex-col justify-center items-center ">
                 <Form/>
-                <div className='w-full max-w-lg px-6'>
-                <p className="w-full  text-center text-xs text-gray-600 md:mt-[-55px]">
-                  By signing up, you agree to our <a href="#" className="underline">Terms of Service</a> and <a href="#" className="underline">Privacy Policy</a>. You can unsubscribe at any time.
+                <div className='w-full z-10  max-w-lg px-6'>
+                <p className="w-full text-center text-xs text-gray-600 md:mt-[-55px]">
+                  By signing up, you agree to our <a onClick={handleOpenModal} className="underline cursor-pointer ">Terms of Service</a> and <button onClick={handleOpenModal} className=''><p   className="underline cursor-pointer ">Privacy Policy</p>
+                    </button>. You can unsubscribe at any time.
                 </p>
                 </div>
                
@@ -57,7 +61,7 @@ const BestSeller = () => {
             </div>
           </section>
 
-    </section>
+  
   );
 };
 

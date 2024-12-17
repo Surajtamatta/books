@@ -16,7 +16,7 @@ const ThirdCarousal = ({ data }) => {
   };
 
   return (
-    <div className="bg-[#1F1E2C] h-full gap-2 sm:gap-4  md:p-6 p-8 sm:py-14 text-white text-center flex flex-col justify-between items-center">
+    <div className="w-full bg-[#1F1E2C] h-full gap-2 sm:gap-4  md:p-6 p-8 sm:py-14 text-white text-center flex flex-col justify-between items-center">
       <div className="flex w-full justify-between items-center gap-2 sm:gap-4">
         {/* Custom Previous Button */}
         <button
