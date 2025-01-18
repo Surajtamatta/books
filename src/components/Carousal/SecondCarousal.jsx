@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import ContentWarning from '../contentwarning';
+import { ImWarning } from "react-icons/im";
+import { useModal } from '@/context/modalContext';
 const lightenColor = (color, percent) => {
   const num = parseInt(color.replace("#", ""), 16);
   const r = (num >> 16) + Math.round((255 - (num >> 16)) * percent);
@@ -12,13 +14,22 @@ const lightenColor = (color, percent) => {
 };
 
 const SecondCarousel = ({ data }) => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { openModal } = useModal();
+
+  const handleOpenModal = (data) => {
+    openModal(
+      <ContentWarning data={data}/>
+    );
+  };
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  // Get background color based on title
-  const getBackgroundColor = (title) => {
-    return title.toLowerCase().includes("collide") ? "#6e9277" : "#c87faa";
-  };
-  const backgroundColor = getBackgroundColor(data[currentSlideIndex]?.title || "");
+  const backgroundColor = data[currentSlideIndex]?.bgColor || ""
   const lightColor = lightenColor(backgroundColor, 0.5);
 
   const handleNext = () => {
@@ -53,6 +64,11 @@ const SecondCarousel = ({ data }) => {
                     dangerouslySetInnerHTML={{ __html: book.description }}
                     className="text-sm sm:text-base lg:text-lg text-balance my-6 text-white font-montserrat font-normal leading-relaxed flex flex-col gap-4"
                   />
+                 <div>
+                 <h4 className="text-sm flex items-end gap-2  mt-4 text-rose-400 ">
+                    <ImWarning className='text-lg'/>
+                     This book contains sensitive content.<span className='text-smunderline text-blue-600 hover:text-blue-800 decoration-solid cursor-pointer' onClick={()=>handleOpenModal(book?.contentwarings)}> See more...</span></h4>
+
                   <div className="flex space-x-4 mt-4">
                    <Link href={book.read}>
                     <button
@@ -73,6 +89,7 @@ const SecondCarousel = ({ data }) => {
                     </Link>
                    
                   </div>
+                 </div>
                 </div>
                 <div className="w-full lg:w-1/2 flex justify-end items-center relative p-2">
                   <h1

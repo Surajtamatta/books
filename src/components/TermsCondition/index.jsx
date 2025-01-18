@@ -13,7 +13,7 @@ const TermsConditions = () => {
       </h2>
     </div>
 
-    <div class="space-y-4 text-gray-700">
+    <div class="space-y-4 text-gray-700  ">
       <h3 class="sm:text-xl text-base text-[#bb87c9] font-semibold mt-2 sm:mt-6">Privacy Policy </h3>
       <p className='font-montserrat sm:text-base text-[12px] text-justify '>
       Your privacy is important to me. When you sign up for my newsletter, I collect your email address to share updates, exclusive previews, behind-the-scenes content, and the occasional giveaway or surprise. I will never share, sell, or distribute your information to third parties. This newsletter is intended for readers 18 and older, as some content may include adult themes or explicit material not suitable for younger audiences. If at any time you no longer wish to receive my emails, you can unsubscribe by clicking the “unsubscribe” link at the bottom of any message. 
