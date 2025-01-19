@@ -66,7 +66,6 @@ export const booksdata = [
         "Alcohol/drug use",
         "Sexual content",
         "Explicit language",
-        
       ],
       description: `
       <p>Olympian skater Sierra Romanova is determined to reclaim her the spotlight after an accident left her battling panic attacks. Enter Dylan Donovan, a cocky hockey player whose NHL dreams are slipping away after being kicked off his team. Desperate to stay on the rink, Dylan turns to figure skating—and to Sierra. </p>
