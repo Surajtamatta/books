@@ -65,9 +65,13 @@ const SecondCarousel = ({ data }) => {
                     className="text-sm sm:text-base lg:text-lg text-balance my-6 text-white font-montserrat font-normal leading-relaxed flex flex-col gap-4"
                   />
                  <div>
-                 <h4 className="text-sm flex items-end gap-2  mt-4 text-rose-400 ">
-                    <ImWarning className='text-lg'/>
-                     This book contains sensitive content.<span className='text-smunderline text-blue-600 hover:text-blue-800 decoration-solid cursor-pointer' onClick={()=>handleOpenModal(book?.contentwarings)}> See more...</span></h4>
+                 <h4 className="text-sm flex items-end gap-2  mt-4 text-rose-500 ">
+                    {/* <ImWarning className='text-lg'/> */}
+                     {/* This book contains sensitive content.<span className='text-smunderline text-blue-600 hover:text-blue-800 decoration-solid cursor-pointer' onClick={()=>handleOpenModal(book?.contentwarings)}> See more...</span> */}
+                     <span className='text-white font-bold text-base cursor-pointer decoration-solid underline decoration-white' onClick={()=>handleOpenModal(book?.contentwarings)}>
+                      Content Warning!
+                     </span>
+                  </h4>
 
                   <div className="flex space-x-4 mt-4">
                    <Link href={book.read}>

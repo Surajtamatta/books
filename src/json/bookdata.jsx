@@ -55,7 +55,7 @@ export const booksdata = [
       bookcover:'/revolvebook.png',
       imgSrc: "/revolvecover.jpg",
       bgColor:'#96A3DE',
-      isavailable:'COMING OCT 28, 2025',
+      isavailable:'COMING OCT 14, 2025',
       releaseDate: "October, 2025",
       read: "https://www.penguinrandomhouse.com/books/761859/revolve-by-bal-khabra/ ",
       goodreads: "https://www.goodreads.com/book/isbn/9780593818305",
@@ -66,10 +66,11 @@ export const booksdata = [
         "Alcohol use",
         "Sexual content",
         "Explicit language",
+        "Alcohol/drug use"
       ],
       description: `
-      <p>Olympian skater Sierra Romanova is determined to reclaim her the spotlight after an accident left her battling panic attacks. Enter Dylan Donovan, a cocky hockey player whose NHL dreams are slipping away after being kicked off his team. Desperate to stay on the rink, Dylan turns to figure skating—and to Sierra.</p>
-      <p>Soon enough, their flimsy fake-dating rules fall way, but before things spiral out of control, Sage and Elias will hove to decide if they're willing to take the leap together or if they'll call it quits.</p>
+      <p>Olympian skater Sierra Romanova is determined to reclaim her the spotlight after an accident left her battling panic attacks. Enter Dylan Donovan, a cocky hockey player whose NHL dreams are slipping away after being kicked off his team. Desperate to stay on the rink, Dylan turns to figure skating—and to Sierra. </p>
+      <p>When she needs a new pairs partner, she's only got one option and it just so happens to be the cocky hockey player she can't stand. She's disciplined, he's a wildcard, but together, they might just be the perfect match.</p>
     `
     },
     
