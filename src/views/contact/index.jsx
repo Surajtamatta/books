@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { contactSchema } from "@/validation/contactForm";
 import { useProfanityChecker, Language } from "glin-profanity";
-
+import { ImSpinner2 } from "react-icons/im";
 const Subscribe = () => {
   const {
     register,
@@ -40,32 +40,40 @@ const Subscribe = () => {
     checkText(inputText);
   };
 
-  const onSubmit = async (data) => {
-    if (result?.containsProfanity) {
-      alert("Please revise your message to remove inappropriate content.");
-      return;
-    }
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
+const onSubmit = async (data) => {
+  if (result?.containsProfanity) {
+    alert("Please revise your message to remove inappropriate content.");
+    return;
+  }
 
-      if (response.status === 200) {
-        alert("Message sent successfully!");
-      } else {
-        alert("Failed to send the message. Please try again later.");
-      }
-    } catch (error) {
-      alert("An error occurred. Please try again later.");
-      console.error("Error sending message:", error);
+  if (isSubmitting) return; // Prevent multiple submissions
+  setIsSubmitting(true); // Disable further submissions
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+
+    if (response.status === 200) {
+      alert("Message sent successfully!");
+    } else {
+      alert("Failed to send the message. Please try again later.");
     }
-  };
+  } catch (error) {
+    alert("An error occurred. Please try again later.");
+    console.error("Error sending message:", error);
+  } finally {
+    setIsSubmitting(false); // Re-enable the submit button
+  }
+};
+
 
   return (
     <section id="contact" className="w-full sm:min-h-[90vh] bg-[#1f1e2c] p-6">
@@ -165,12 +173,17 @@ const Subscribe = () => {
               </div>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                className="px-6 py-2 bg-transparent border border-gray-500 text-white font-semibold hover:bg-gray-600 rounded-sm"
-              >
-                SEND
-              </button>
+                <button
+              type="submit"
+              disabled={isSubmitting}
+              className="px-6 py-2 w-24 bg-transparent border border-gray-500 text-white font-semibold rounded-sm flex items-center justify-center"
+            >
+              {isSubmitting ? (
+                <ImSpinner2 className="animate-spin text-white text-xl" />
+              ) : (
+                "SEND"
+              )}
+            </button>
             </form>
           </div>
         </div>
